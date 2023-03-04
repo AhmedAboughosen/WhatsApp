@@ -41,9 +41,9 @@ Simply, when your API publishes event messages, it doesn't directly send them. I
 
 # API design
 
-CreateAccount(phoneNumber: string): string
-VerifyCode(phoneNumber: string,code : string): TokenDto 
-setUpAccount(fullName: string,profileImage : bytes): string 
-UpdateProfile(fullName: string, dob : string): string 
+1. CreateAccount(phoneNumber: string): string
+2. VerifyCode(phoneNumber: string,code : string): TokenDto 
+3. setUpAccount(fullName: string,profileImage : bytes): string 
+4. UpdateProfile(fullName: string, dob : string): string 
 
 
