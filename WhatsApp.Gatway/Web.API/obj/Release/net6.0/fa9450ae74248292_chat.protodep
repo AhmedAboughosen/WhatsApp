@@ -1,0 +1,5 @@
+obj\Release\net6.0\Protos\Client/Chat.cs \
+obj\Release\net6.0\Protos\Client/ChatGrpc.cs: C:/Users/a.hassan/.nuget/packages/grpc.tools/2.52.0-pre1/build/native/include/google/protobuf/wrappers.proto\
+ C:/Users/a.hassan/.nuget/packages/grpc.tools/2.52.0-pre1/build/native/include/google/protobuf/empty.proto\
+ C:/Users/a.hassan/.nuget/packages/grpc.tools/2.52.0-pre1/build/native/include/google/protobuf/timestamp.proto\
+ Protos/Client/chat.proto

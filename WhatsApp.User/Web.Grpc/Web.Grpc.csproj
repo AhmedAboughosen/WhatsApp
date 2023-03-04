@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <UserSecretsId>d8a41a35-f19b-4ab7-b517-8a944676d6cc</UserSecretsId>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <Protobuf Include="Protos\user_builder.proto" GrpcServices="Server" />
+        <Protobuf Include="Protos\user.proto" GrpcServices="Server" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Grpc.AspNetCore" Version="2.40.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Core.Domain\Core.Domain.csproj" />
+      <ProjectReference Include="..\Infrastructure.MessageBus\Infrastructure.MessageBus.csproj" />
+      <ProjectReference Include="..\Infrastructure.Persistence\Infrastructure.Persistence.csproj" />
+      <ProjectReference Include="..\Infrastructure.Services\Infrastructure.Services.csproj" />
+    </ItemGroup>
+
+</Project>

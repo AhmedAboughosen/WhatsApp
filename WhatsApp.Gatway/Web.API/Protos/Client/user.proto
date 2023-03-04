@@ -1,0 +1,60 @@
+syntax = "proto3";
+
+package whatsapp.user;
+
+import "google/protobuf/wrappers.proto";
+import "google/protobuf/empty.proto";
+import "google/protobuf/timestamp.proto";
+
+option csharp_namespace = "WhatsApp.Gateway.Web.Client.User";
+
+
+service User {
+  rpc CreateAccount (CreateAccountRequest) returns (CreateAccountResponse);
+  rpc VerifyCode (VerifyCodeRequest) returns (VerifyCodeResponse);
+  rpc UpdateProfile (UpdateProfileRequest) returns (MessageResponse);
+  rpc SetUpAccount (SetUpAccountRequest) returns (MessageResponse);
+
+}
+
+message CreateAccountRequest {
+  string phone_number = 1;
+  string device_id = 2;
+  string notifications_token = 3;
+  string sign_token = 4;
+}
+
+
+message VerifyCodeResponse {
+  string phone_number = 1;
+  string id = 2;
+  string token = 3;
+}
+
+message CreateAccountResponse {
+  string user_id = 1;
+}
+
+message MessageResponse {
+  string message = 1;
+}
+
+message VerifyCodeRequest {
+  string phone_number = 1;
+  string token = 2;
+}
+
+message UpdateProfileRequest {
+  string full_name = 1;
+  string user_id = 2;
+  string profile_url = 3;
+  string dob = 4;
+}
+
+message SetUpAccountRequest {
+  string full_name = 1;
+  string user_id = 2;
+  string profile_url = 3;
+  string dob = 4;
+}
+

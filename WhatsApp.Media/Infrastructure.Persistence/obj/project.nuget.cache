@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "QBFnTJ9iH/8EajiKQ7pfbx16BUr8UvhObHNwo0/0XNmkEH3eQZ+Tved6El0I1qws1ipiux70LU4rJnxjOT12GQ==",
+  "success": true,
+  "projectFilePath": "D:\\PersonalProjects\\backend\\WhatsApp\\WhatsApp.Media\\Infrastructure.Persistence\\Infrastructure.Persistence.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\a.hassan\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.12\\microsoft.netcore.app.ref.6.0.12.nupkg.sha512",
+    "C:\\Users\\a.hassan\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.12\\microsoft.windowsdesktop.app.ref.6.0.12.nupkg.sha512",
+    "C:\\Users\\a.hassan\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.12\\microsoft.aspnetcore.app.ref.6.0.12.nupkg.sha512"
+  ],
+  "logs": []
+}

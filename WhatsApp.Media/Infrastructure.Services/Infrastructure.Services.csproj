@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="FirebaseAuthentication.net" Version="4.0.2" />
+      <PackageReference Include="FirebaseStorage.net" Version="1.0.3" />
+      <PackageReference Include="MediatR" Version="12.0.0" />
+      <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="11.1.0" />
+      <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="8.0.0-preview.1.23110.8" />
+      <PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="8.0.0-preview.1.23110.8" />
+      <PackageReference Include="Microsoft.Extensions.Options" Version="8.0.0-preview.1.23110.8" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Core.Domain\Core.Domain.csproj" />
+    </ItemGroup>
+
+</Project>

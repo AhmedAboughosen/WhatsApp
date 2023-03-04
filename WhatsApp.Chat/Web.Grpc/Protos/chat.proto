@@ -1,0 +1,57 @@
+syntax = "proto3";
+
+package whatsapp.chat;
+
+import "google/protobuf/wrappers.proto";
+import "google/protobuf/empty.proto";
+import "google/protobuf/timestamp.proto";
+
+option csharp_namespace = "WhatsApp.Web.Chats.Grpc.Protos.Chat";
+
+
+service Chat {
+  rpc PushMessageToUser (NewMessageRequest) returns (MessageResponse);
+  rpc PushMessageToGroup (NewMessageRequest) returns (MessageResponse);
+  rpc UserChats (UserChatRequest) returns (UserChatResponse);
+
+}
+
+message NewMessageRequest {
+  string from_user_id = 1;
+  string to_user_id = 2;
+  MessageType message_type = 5;
+  string full_name = 6;
+  string content = 7;
+  repeated string media_url = 8;
+  google.protobuf.Timestamp sent_at = 9;
+  google.protobuf.Timestamp delivered_at = 10;
+  google.protobuf.Timestamp seen_at = 11;
+  string chat_channel_id = 12;
+}
+
+message UserChatResponse {
+  repeated UserChatContentResponse content = 1;
+}
+
+message UserChatContentResponse {
+  string title = 1;
+  google.protobuf.Timestamp sent_at = 2;
+  google.protobuf.Timestamp delivered_at = 3;
+  google.protobuf.Timestamp seen_at = 4;
+
+}
+
+message UserChatRequest {
+  string user_id = 1;
+
+}
+
+message MessageResponse {
+  string message = 1;
+}
+
+enum MessageType{
+  Media = 0;
+  Text = 1;
+  MediaWithText = 2;
+}

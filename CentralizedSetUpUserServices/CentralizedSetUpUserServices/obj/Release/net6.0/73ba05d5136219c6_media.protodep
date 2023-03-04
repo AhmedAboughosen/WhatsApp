@@ -1,0 +1,2 @@
+obj\Release\net6.0\Protos\Clients/Media.cs \
+obj\Release\net6.0\Protos\Clients/MediaGrpc.cs: Protos/Clients/media.proto

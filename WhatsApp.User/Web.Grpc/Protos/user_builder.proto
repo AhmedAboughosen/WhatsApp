@@ -1,0 +1,33 @@
+syntax = "proto3";
+import "google/protobuf/wrappers.proto";
+
+package whatsapp.user;
+
+
+option csharp_namespace = "WhatsApp.User.Grpc.Protos.UserBuilder";
+
+
+service UserHistory{
+  rpc Read(Request) returns (Response);
+}
+
+message Request{
+  int32 page = 1;
+  int32 size = 2;
+}
+
+message Response {
+  repeated EventNotification eventNotification = 1;
+  int32 page = 2;
+  int32 size = 3;
+  int32 count = 4;
+}
+
+message EventNotification {
+  google.protobuf.StringValue id = 1;
+  google.protobuf.StringValue full_name = 2;
+  string created_date = 3;
+  string phone_number = 4;
+  string profile_url = 5;
+
+}

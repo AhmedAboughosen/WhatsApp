@@ -1,0 +1,5 @@
+obj\Debug\net6.0\Protos/CreateUser.cs \
+obj\Debug\net6.0\Protos/CreateUserGrpc.cs: C:/Users/a.hassan/.nuget/packages/grpc.tools/2.40.0/build/native/include/google/protobuf/wrappers.proto\
+ C:/Users/a.hassan/.nuget/packages/grpc.tools/2.40.0/build/native/include/google/protobuf/empty.proto\
+ C:/Users/a.hassan/.nuget/packages/grpc.tools/2.40.0/build/native/include/google/protobuf/timestamp.proto\
+ Protos/create_user.proto

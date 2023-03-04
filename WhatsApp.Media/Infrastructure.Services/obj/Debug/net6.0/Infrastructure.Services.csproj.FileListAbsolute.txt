@@ -1,0 +1,15 @@
+D:\PersonalProjects\backend\WhatsApp\WhatsApp.Media\Infrastructure.Services\bin\Debug\net6.0\Infrastructure.Services.deps.json
+D:\PersonalProjects\backend\WhatsApp\WhatsApp.Media\Infrastructure.Services\bin\Debug\net6.0\Infrastructure.Services.dll
+D:\PersonalProjects\backend\WhatsApp\WhatsApp.Media\Infrastructure.Services\bin\Debug\net6.0\Infrastructure.Services.pdb
+D:\PersonalProjects\backend\WhatsApp\WhatsApp.Media\Infrastructure.Services\bin\Debug\net6.0\Core.Domain.dll
+D:\PersonalProjects\backend\WhatsApp\WhatsApp.Media\Infrastructure.Services\bin\Debug\net6.0\Core.Domain.pdb
+D:\PersonalProjects\backend\WhatsApp\WhatsApp.Media\Infrastructure.Services\obj\Debug\net6.0\Infrastructure.Services.csproj.AssemblyReference.cache
+D:\PersonalProjects\backend\WhatsApp\WhatsApp.Media\Infrastructure.Services\obj\Debug\net6.0\Infrastructure.Services.GeneratedMSBuildEditorConfig.editorconfig
+D:\PersonalProjects\backend\WhatsApp\WhatsApp.Media\Infrastructure.Services\obj\Debug\net6.0\Infrastructure.Services.AssemblyInfoInputs.cache
+D:\PersonalProjects\backend\WhatsApp\WhatsApp.Media\Infrastructure.Services\obj\Debug\net6.0\Infrastructure.Services.AssemblyInfo.cs
+D:\PersonalProjects\backend\WhatsApp\WhatsApp.Media\Infrastructure.Services\obj\Debug\net6.0\Infrastructure.Services.csproj.CoreCompileInputs.cache
+D:\PersonalProjects\backend\WhatsApp\WhatsApp.Media\Infrastructure.Services\obj\Debug\net6.0\Infrastructure.Services.csproj.CopyComplete
+D:\PersonalProjects\backend\WhatsApp\WhatsApp.Media\Infrastructure.Services\obj\Debug\net6.0\Infrastructure.Services.dll
+D:\PersonalProjects\backend\WhatsApp\WhatsApp.Media\Infrastructure.Services\obj\Debug\net6.0\refint\Infrastructure.Services.dll
+D:\PersonalProjects\backend\WhatsApp\WhatsApp.Media\Infrastructure.Services\obj\Debug\net6.0\Infrastructure.Services.pdb
+D:\PersonalProjects\backend\WhatsApp\WhatsApp.Media\Infrastructure.Services\obj\Debug\net6.0\ref\Infrastructure.Services.dll

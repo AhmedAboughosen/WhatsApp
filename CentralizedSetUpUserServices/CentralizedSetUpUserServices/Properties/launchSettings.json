@@ -1,0 +1,13 @@
+﻿{
+  "profiles": {
+    "CentralizedSetUpUserServices": {
+      "commandName": "Project",
+      "dotnetRunMessages": true,
+      "launchBrowser": false,
+      "applicationUrl": "http://localhost:5096;https://localhost:7053",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    }
+  }
+}

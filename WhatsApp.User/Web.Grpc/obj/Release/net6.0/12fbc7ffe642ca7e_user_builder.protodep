@@ -1,0 +1,3 @@
+obj\Release\net6.0\Protos/UserBuilder.cs \
+obj\Release\net6.0\Protos/UserBuilderGrpc.cs: C:/Users/a.hassan/.nuget/packages/grpc.tools/2.40.0/build/native/include/google/protobuf/wrappers.proto\
+ Protos/user_builder.proto

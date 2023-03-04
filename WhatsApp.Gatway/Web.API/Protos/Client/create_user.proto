@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+package CentralizedSetUpUserServices.create_user;
+
+import "google/protobuf/wrappers.proto";
+import "google/protobuf/empty.proto";
+import "google/protobuf/timestamp.proto";
+
+option csharp_namespace = "WhatsApp.Gateway.Protos.Client.CreateUser";
+
+
+service CreateUser {
+  rpc SetUpAccount (SetUpAccountRequest) returns (MessageResponse);
+}
+
+message SetUpAccountRequest {
+  string full_name = 1;
+  string user_id = 2;
+  string dob = 4;
+  bytes image = 5;
+  string extension = 6;
+}
+
+message MessageResponse {
+  string message = 1;
+}
+
+

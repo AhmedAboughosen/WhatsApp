@@ -1,0 +1,15 @@
+D:\PersonalProjects\backend\WhatsApp\WhatsApp.Chat\Core.Application\bin\Debug\net6.0\Core.Application.deps.json
+D:\PersonalProjects\backend\WhatsApp\WhatsApp.Chat\Core.Application\bin\Debug\net6.0\Core.Application.dll
+D:\PersonalProjects\backend\WhatsApp\WhatsApp.Chat\Core.Application\bin\Debug\net6.0\Core.Application.pdb
+D:\PersonalProjects\backend\WhatsApp\WhatsApp.Chat\Core.Application\obj\Debug\net6.0\Core.Application.csproj.AssemblyReference.cache
+D:\PersonalProjects\backend\WhatsApp\WhatsApp.Chat\Core.Application\obj\Debug\net6.0\Core.Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\PersonalProjects\backend\WhatsApp\WhatsApp.Chat\Core.Application\obj\Debug\net6.0\Core.Application.AssemblyInfoInputs.cache
+D:\PersonalProjects\backend\WhatsApp\WhatsApp.Chat\Core.Application\obj\Debug\net6.0\Core.Application.AssemblyInfo.cs
+D:\PersonalProjects\backend\WhatsApp\WhatsApp.Chat\Core.Application\obj\Debug\net6.0\Core.Application.csproj.CoreCompileInputs.cache
+D:\PersonalProjects\backend\WhatsApp\WhatsApp.Chat\Core.Application\obj\Debug\net6.0\Core.Application.dll
+D:\PersonalProjects\backend\WhatsApp\WhatsApp.Chat\Core.Application\obj\Debug\net6.0\refint\Core.Application.dll
+D:\PersonalProjects\backend\WhatsApp\WhatsApp.Chat\Core.Application\obj\Debug\net6.0\Core.Application.pdb
+D:\PersonalProjects\backend\WhatsApp\WhatsApp.Chat\Core.Application\obj\Debug\net6.0\ref\Core.Application.dll
+D:\PersonalProjects\backend\WhatsApp\WhatsApp.Chat\Core.Application\bin\Debug\net6.0\Core.Domain.dll
+D:\PersonalProjects\backend\WhatsApp\WhatsApp.Chat\Core.Application\bin\Debug\net6.0\Core.Domain.pdb
+D:\PersonalProjects\backend\WhatsApp\WhatsApp.Chat\Core.Application\obj\Debug\net6.0\Core.Application.csproj.CopyComplete

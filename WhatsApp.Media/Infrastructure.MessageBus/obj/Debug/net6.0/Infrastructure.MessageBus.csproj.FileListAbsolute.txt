@@ -1,0 +1,12 @@
+D:\PersonalProjects\backend\WhatsApp\WhatsApp.Media\Infrastructure.MessageBus\bin\Debug\net6.0\Infrastructure.MessageBus.deps.json
+D:\PersonalProjects\backend\WhatsApp\WhatsApp.Media\Infrastructure.MessageBus\bin\Debug\net6.0\Infrastructure.MessageBus.dll
+D:\PersonalProjects\backend\WhatsApp\WhatsApp.Media\Infrastructure.MessageBus\bin\Debug\net6.0\Infrastructure.MessageBus.pdb
+D:\PersonalProjects\backend\WhatsApp\WhatsApp.Media\Infrastructure.MessageBus\obj\Debug\net6.0\Infrastructure.MessageBus.csproj.AssemblyReference.cache
+D:\PersonalProjects\backend\WhatsApp\WhatsApp.Media\Infrastructure.MessageBus\obj\Debug\net6.0\Infrastructure.MessageBus.GeneratedMSBuildEditorConfig.editorconfig
+D:\PersonalProjects\backend\WhatsApp\WhatsApp.Media\Infrastructure.MessageBus\obj\Debug\net6.0\Infrastructure.MessageBus.AssemblyInfoInputs.cache
+D:\PersonalProjects\backend\WhatsApp\WhatsApp.Media\Infrastructure.MessageBus\obj\Debug\net6.0\Infrastructure.MessageBus.AssemblyInfo.cs
+D:\PersonalProjects\backend\WhatsApp\WhatsApp.Media\Infrastructure.MessageBus\obj\Debug\net6.0\Infrastructure.MessageBus.csproj.CoreCompileInputs.cache
+D:\PersonalProjects\backend\WhatsApp\WhatsApp.Media\Infrastructure.MessageBus\obj\Debug\net6.0\Infrastructure.MessageBus.dll
+D:\PersonalProjects\backend\WhatsApp\WhatsApp.Media\Infrastructure.MessageBus\obj\Debug\net6.0\refint\Infrastructure.MessageBus.dll
+D:\PersonalProjects\backend\WhatsApp\WhatsApp.Media\Infrastructure.MessageBus\obj\Debug\net6.0\Infrastructure.MessageBus.pdb
+D:\PersonalProjects\backend\WhatsApp\WhatsApp.Media\Infrastructure.MessageBus\obj\Debug\net6.0\ref\Infrastructure.MessageBus.dll

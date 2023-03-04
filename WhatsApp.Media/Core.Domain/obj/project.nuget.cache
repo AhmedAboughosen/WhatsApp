@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "2YXRWHNNV0hN3RjFYVl1qnNeTixW294kymNksjj/cmYaDp7BXdTWeV5OZX7+8DKfhOnh55oFuNJ4egwQ8ZG+Hw==",
+  "success": true,
+  "projectFilePath": "D:\\PersonalProjects\\backend\\WhatsApp\\WhatsApp.Media\\Core.Domain\\Core.Domain.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\a.hassan\\.nuget\\packages\\mediatr.contracts\\2.0.0\\mediatr.contracts.2.0.0.nupkg.sha512",
+    "C:\\Users\\a.hassan\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.12\\microsoft.netcore.app.ref.6.0.12.nupkg.sha512",
+    "C:\\Users\\a.hassan\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.12\\microsoft.windowsdesktop.app.ref.6.0.12.nupkg.sha512",
+    "C:\\Users\\a.hassan\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.12\\microsoft.aspnetcore.app.ref.6.0.12.nupkg.sha512"
+  ],
+  "logs": []
+}
