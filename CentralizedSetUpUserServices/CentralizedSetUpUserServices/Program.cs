@@ -1,4 +1,6 @@
+using CentralizedSetUpUserServices.Publisher;
 using CentralizedSetUpUserServices.Services;
+using RabbitMQ.Client;
 using Web.Proto.Media;
 using WhatsApp.Create.Grpc.Protos.User;
 
@@ -9,6 +11,11 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddGrpc();
+
+builder.Services.AddTransient<NotificationPublisher>();
+
+builder.Services.AddSingleton(s => new ConnectionFactory()
+    { HostName = builder.Configuration["MessageBroker:HostName"] });
 
 builder.Services.AddGrpcClient<Media.MediaClient>((o) =>
 {
@@ -23,7 +30,7 @@ builder.Services.AddGrpcClient<User.UserClient>((o) =>
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
-app.MapGrpcService<UserService>();
+app.MapGrpcService<CreateUserService>();
 app.MapGet("/",
     () =>
         "Communication with gRPC endpoints must be made through a gRPC client. To learn how to create a client, visit: https://go.microsoft.com/fwlink/?linkid=2086909");

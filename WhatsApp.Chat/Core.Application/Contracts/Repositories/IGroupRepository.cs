@@ -8,5 +8,7 @@ namespace Core.Application.Contracts.Repositories
     {
         Task<bool> AnyAsync(Guid groupId);
         Task<Group?> GetAsync(Guid groupId);
+        Task<List<Group>> GetAllAsync(Guid userId);
+
     }
 }

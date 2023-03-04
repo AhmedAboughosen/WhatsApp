@@ -9,6 +9,7 @@
         IGroupRepository GroupRepository { get; }
         IOutboxMessageRepository OutboxMessageRepository { get; }
         IUserChatRepository UserChatRepository { get; }
+        IUserGroupRepository UserGroupRepository { get; }
         Task SaveChangesAsync();
     }
 }

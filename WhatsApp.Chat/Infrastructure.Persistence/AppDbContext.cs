@@ -15,6 +15,7 @@ namespace Infrastructure.Persistence
 
         public DbSet<OutboxMessage> OutboxMessages { get; set; }
         public DbSet<UserChat> UserChats { get; set; }
+        public DbSet<UserGroup> UserGroups { get; set; }
 
 
         public AppDbContext()

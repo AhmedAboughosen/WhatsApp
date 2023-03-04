@@ -9,12 +9,12 @@ using MediatR;
 
 namespace Infrastructure.Services.Handler
 {
-    public class NewGroupMessageCreatedHandler : IRequestHandler<NewGroupMessageRequestDto, bool>
+    public class PushMessageToGroupHandler : IRequestHandler<NewGroupMessageRequestDto, bool>
     {
         private readonly IUnitOfWork _unitOfWork;
         private readonly INotificationBusPublisher _notificationBusPublisher;
 
-        public NewGroupMessageCreatedHandler(IUnitOfWork unitOfWork, INotificationBusPublisher notificationBusPublisher)
+        public PushMessageToGroupHandler(IUnitOfWork unitOfWork, INotificationBusPublisher notificationBusPublisher)
         {
             _unitOfWork = unitOfWork;
             _notificationBusPublisher = notificationBusPublisher;
@@ -35,6 +35,20 @@ namespace Infrastructure.Services.Handler
             var message = new Message(dto, group.Id);
 
 
+            var userChat = await _unitOfWork.UserGroupRepository.GetAsync(group.Id, dto.FromUserId);
+
+            if (userChat == null)
+            {
+                //first Message between users
+                await _unitOfWork.UserChatRepository.AddAsync(new UserChat(group.Id, dto.FromUserId, dto.SentAt,
+                    dto.DeliveredAt, dto.SeenAt, dto.FullName));
+            }
+            else
+            {
+                userChat.Update(dto.SentAt, dto.DeliveredAt, dto.SeenAt);
+            }
+
+            
             await _unitOfWork.MessageRepository.AddAsync(message);
 
 

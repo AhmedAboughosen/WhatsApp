@@ -1,3 +1,7 @@
+using Infrastructure.MessageBus;
+using Infrastructure.Services;
+using Web.Grpc.ExceptionHandler;
+using Web.Grpc.Interceptors;
 using Web.Grpc.Services;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -6,7 +10,22 @@ var builder = WebApplication.CreateBuilder(args);
 // For instructions on how to configure Kestrel and gRPC clients on macOS, visit https://go.microsoft.com/fwlink/?linkid=2099682
 
 // Add services to the container.
-builder.Services.AddGrpc();
+
+// Add services to the container.
+builder.Services.AddGrpc(o =>
+{
+    {
+        o.Interceptors.Add<ThreadCultureInterceptor>();
+        o.Interceptors.Add<ExceptionHandlingInterceptor>();
+    }
+});
+
+
+// services.AddDomainsRegistration(Configuration);
+builder.Services.AddMessageBusRegistration(builder.Configuration);
+builder.Services.AddServicesRegistration(builder.Configuration);
+
+
 
 var app = builder.Build();
 

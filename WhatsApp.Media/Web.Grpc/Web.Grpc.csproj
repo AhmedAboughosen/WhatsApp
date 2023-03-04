@@ -24,6 +24,8 @@
 
     <ItemGroup>
       <ProjectReference Include="..\Core.Domain\Core.Domain.csproj" />
+      <ProjectReference Include="..\Infrastructure.MessageBus\Infrastructure.MessageBus.csproj" />
+      <ProjectReference Include="..\Infrastructure.Services\Infrastructure.Services.csproj" />
     </ItemGroup>
 
 </Project>

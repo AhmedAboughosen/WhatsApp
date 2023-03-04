@@ -12,9 +12,9 @@ using SetUpAccountRequest = CentralizedSetUpUserServices.Protos.CreateUser.SetUp
 
 namespace CentralizedSetUpUserServices.Services;
 
-public class UserService : CreateUser.CreateUserBase
+public class CreateUserService : CreateUser.CreateUserBase
 {
-    private readonly ILogger<UserService> _logger;
+    private readonly ILogger<CreateUserService> _logger;
     private readonly Media.MediaClient _mediaClient;
     private readonly User.UserClient _userClient;
     private readonly NotificationPublisher _notificationPublisher;
@@ -22,7 +22,8 @@ public class UserService : CreateUser.CreateUserBase
     private readonly String _exchangeName;
     private readonly String _routingKey;
 
-    public UserService(ILogger<UserService> logger, Media.MediaClient mediaClient, User.UserClient userClient,
+    public CreateUserService(ILogger<CreateUserService> logger, Media.MediaClient mediaClient,
+        User.UserClient userClient,
         NotificationPublisher notificationPublisher, IConfiguration configuration)
     {
         _logger = logger;
@@ -68,10 +69,10 @@ public class UserService : CreateUser.CreateUserBase
                     ProfileUrl = mediaResponse.ProfileImageUrl
                 });
 
-            
+
             return new MessageResponse
             {
-                Message =userResponse.Message
+                Message = userResponse.Message
             };
         }
         catch (RpcException e)
@@ -91,8 +92,8 @@ public class UserService : CreateUser.CreateUserBase
                 ExchangeName = _exchangeName,
                 RoutingKey = _routingKey
             });
-            
-            
+
+
             return new MessageResponse
             {
                 Message = e.Message

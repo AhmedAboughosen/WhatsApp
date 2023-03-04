@@ -63,15 +63,13 @@ namespace Infrastructure.Services.Handler
 
             try
             {
-                return await firebaseStorageTask;;
+                return (await firebaseStorageTask);
             }
             catch (Exception ex)
             {
                 throw new APIException(
                     ex.Message, HttpStatusCode.Forbidden);
             }
-
-
         }
     }
 }

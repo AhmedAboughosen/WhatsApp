@@ -50,9 +50,21 @@ namespace WhatsApp.Web.Chats.Grpc.Protos.Chat {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::WhatsApp.Web.Chats.Grpc.Protos.Chat.MessageResponse> __Marshaller_whatsapp_chat_MessageResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::WhatsApp.Web.Chats.Grpc.Protos.Chat.MessageResponse.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::WhatsApp.Web.Chats.Grpc.Protos.Chat.NewGroupMessageRequest> __Marshaller_whatsapp_chat_NewGroupMessageRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::WhatsApp.Web.Chats.Grpc.Protos.Chat.NewGroupMessageRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::WhatsApp.Web.Chats.Grpc.Protos.Chat.CreateGroupRequest> __Marshaller_whatsapp_chat_CreateGroupRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::WhatsApp.Web.Chats.Grpc.Protos.Chat.CreateGroupRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::WhatsApp.Web.Chats.Grpc.Protos.Chat.JoinGroupRequest> __Marshaller_whatsapp_chat_JoinGroupRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::WhatsApp.Web.Chats.Grpc.Protos.Chat.JoinGroupRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::WhatsApp.Web.Chats.Grpc.Protos.Chat.LeaveGroupRequest> __Marshaller_whatsapp_chat_LeaveGroupRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::WhatsApp.Web.Chats.Grpc.Protos.Chat.LeaveGroupRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::WhatsApp.Web.Chats.Grpc.Protos.Chat.UserChatRequest> __Marshaller_whatsapp_chat_UserChatRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::WhatsApp.Web.Chats.Grpc.Protos.Chat.UserChatRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::WhatsApp.Web.Chats.Grpc.Protos.Chat.UserChatResponse> __Marshaller_whatsapp_chat_UserChatResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::WhatsApp.Web.Chats.Grpc.Protos.Chat.UserChatResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::WhatsApp.Web.Chats.Grpc.Protos.Chat.GetMessagesRequest> __Marshaller_whatsapp_chat_GetMessagesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::WhatsApp.Web.Chats.Grpc.Protos.Chat.GetMessagesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::WhatsApp.Web.Chats.Grpc.Protos.Chat.MessageListResponse> __Marshaller_whatsapp_chat_MessageListResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::WhatsApp.Web.Chats.Grpc.Protos.Chat.MessageListResponse.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::WhatsApp.Web.Chats.Grpc.Protos.Chat.NewMessageRequest, global::WhatsApp.Web.Chats.Grpc.Protos.Chat.MessageResponse> __Method_PushMessageToUser = new grpc::Method<global::WhatsApp.Web.Chats.Grpc.Protos.Chat.NewMessageRequest, global::WhatsApp.Web.Chats.Grpc.Protos.Chat.MessageResponse>(
@@ -63,11 +75,35 @@ namespace WhatsApp.Web.Chats.Grpc.Protos.Chat {
         __Marshaller_whatsapp_chat_MessageResponse);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Method<global::WhatsApp.Web.Chats.Grpc.Protos.Chat.NewMessageRequest, global::WhatsApp.Web.Chats.Grpc.Protos.Chat.MessageResponse> __Method_PushMessageToGroup = new grpc::Method<global::WhatsApp.Web.Chats.Grpc.Protos.Chat.NewMessageRequest, global::WhatsApp.Web.Chats.Grpc.Protos.Chat.MessageResponse>(
+    static readonly grpc::Method<global::WhatsApp.Web.Chats.Grpc.Protos.Chat.NewGroupMessageRequest, global::WhatsApp.Web.Chats.Grpc.Protos.Chat.MessageResponse> __Method_PushMessageToGroup = new grpc::Method<global::WhatsApp.Web.Chats.Grpc.Protos.Chat.NewGroupMessageRequest, global::WhatsApp.Web.Chats.Grpc.Protos.Chat.MessageResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "PushMessageToGroup",
-        __Marshaller_whatsapp_chat_NewMessageRequest,
+        __Marshaller_whatsapp_chat_NewGroupMessageRequest,
+        __Marshaller_whatsapp_chat_MessageResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::WhatsApp.Web.Chats.Grpc.Protos.Chat.CreateGroupRequest, global::WhatsApp.Web.Chats.Grpc.Protos.Chat.MessageResponse> __Method_CreateGroup = new grpc::Method<global::WhatsApp.Web.Chats.Grpc.Protos.Chat.CreateGroupRequest, global::WhatsApp.Web.Chats.Grpc.Protos.Chat.MessageResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateGroup",
+        __Marshaller_whatsapp_chat_CreateGroupRequest,
+        __Marshaller_whatsapp_chat_MessageResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::WhatsApp.Web.Chats.Grpc.Protos.Chat.JoinGroupRequest, global::WhatsApp.Web.Chats.Grpc.Protos.Chat.MessageResponse> __Method_JoinGroup = new grpc::Method<global::WhatsApp.Web.Chats.Grpc.Protos.Chat.JoinGroupRequest, global::WhatsApp.Web.Chats.Grpc.Protos.Chat.MessageResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "JoinGroup",
+        __Marshaller_whatsapp_chat_JoinGroupRequest,
+        __Marshaller_whatsapp_chat_MessageResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::WhatsApp.Web.Chats.Grpc.Protos.Chat.LeaveGroupRequest, global::WhatsApp.Web.Chats.Grpc.Protos.Chat.MessageResponse> __Method_LeaveGroup = new grpc::Method<global::WhatsApp.Web.Chats.Grpc.Protos.Chat.LeaveGroupRequest, global::WhatsApp.Web.Chats.Grpc.Protos.Chat.MessageResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "LeaveGroup",
+        __Marshaller_whatsapp_chat_LeaveGroupRequest,
         __Marshaller_whatsapp_chat_MessageResponse);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -77,6 +113,14 @@ namespace WhatsApp.Web.Chats.Grpc.Protos.Chat {
         "UserChats",
         __Marshaller_whatsapp_chat_UserChatRequest,
         __Marshaller_whatsapp_chat_UserChatResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::WhatsApp.Web.Chats.Grpc.Protos.Chat.GetMessagesRequest, global::WhatsApp.Web.Chats.Grpc.Protos.Chat.MessageListResponse> __Method_GetMessages = new grpc::Method<global::WhatsApp.Web.Chats.Grpc.Protos.Chat.GetMessagesRequest, global::WhatsApp.Web.Chats.Grpc.Protos.Chat.MessageListResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetMessages",
+        __Marshaller_whatsapp_chat_GetMessagesRequest,
+        __Marshaller_whatsapp_chat_MessageListResponse);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -95,13 +139,37 @@ namespace WhatsApp.Web.Chats.Grpc.Protos.Chat {
       }
 
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::System.Threading.Tasks.Task<global::WhatsApp.Web.Chats.Grpc.Protos.Chat.MessageResponse> PushMessageToGroup(global::WhatsApp.Web.Chats.Grpc.Protos.Chat.NewMessageRequest request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::WhatsApp.Web.Chats.Grpc.Protos.Chat.MessageResponse> PushMessageToGroup(global::WhatsApp.Web.Chats.Grpc.Protos.Chat.NewGroupMessageRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::WhatsApp.Web.Chats.Grpc.Protos.Chat.MessageResponse> CreateGroup(global::WhatsApp.Web.Chats.Grpc.Protos.Chat.CreateGroupRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::WhatsApp.Web.Chats.Grpc.Protos.Chat.MessageResponse> JoinGroup(global::WhatsApp.Web.Chats.Grpc.Protos.Chat.JoinGroupRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::WhatsApp.Web.Chats.Grpc.Protos.Chat.MessageResponse> LeaveGroup(global::WhatsApp.Web.Chats.Grpc.Protos.Chat.LeaveGroupRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::WhatsApp.Web.Chats.Grpc.Protos.Chat.UserChatResponse> UserChats(global::WhatsApp.Web.Chats.Grpc.Protos.Chat.UserChatRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::WhatsApp.Web.Chats.Grpc.Protos.Chat.MessageListResponse> GetMessages(global::WhatsApp.Web.Chats.Grpc.Protos.Chat.GetMessagesRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -116,7 +184,11 @@ namespace WhatsApp.Web.Chats.Grpc.Protos.Chat {
       return grpc::ServerServiceDefinition.CreateBuilder()
           .AddMethod(__Method_PushMessageToUser, serviceImpl.PushMessageToUser)
           .AddMethod(__Method_PushMessageToGroup, serviceImpl.PushMessageToGroup)
-          .AddMethod(__Method_UserChats, serviceImpl.UserChats).Build();
+          .AddMethod(__Method_CreateGroup, serviceImpl.CreateGroup)
+          .AddMethod(__Method_JoinGroup, serviceImpl.JoinGroup)
+          .AddMethod(__Method_LeaveGroup, serviceImpl.LeaveGroup)
+          .AddMethod(__Method_UserChats, serviceImpl.UserChats)
+          .AddMethod(__Method_GetMessages, serviceImpl.GetMessages).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
@@ -127,8 +199,12 @@ namespace WhatsApp.Web.Chats.Grpc.Protos.Chat {
     public static void BindService(grpc::ServiceBinderBase serviceBinder, ChatBase serviceImpl)
     {
       serviceBinder.AddMethod(__Method_PushMessageToUser, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::WhatsApp.Web.Chats.Grpc.Protos.Chat.NewMessageRequest, global::WhatsApp.Web.Chats.Grpc.Protos.Chat.MessageResponse>(serviceImpl.PushMessageToUser));
-      serviceBinder.AddMethod(__Method_PushMessageToGroup, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::WhatsApp.Web.Chats.Grpc.Protos.Chat.NewMessageRequest, global::WhatsApp.Web.Chats.Grpc.Protos.Chat.MessageResponse>(serviceImpl.PushMessageToGroup));
+      serviceBinder.AddMethod(__Method_PushMessageToGroup, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::WhatsApp.Web.Chats.Grpc.Protos.Chat.NewGroupMessageRequest, global::WhatsApp.Web.Chats.Grpc.Protos.Chat.MessageResponse>(serviceImpl.PushMessageToGroup));
+      serviceBinder.AddMethod(__Method_CreateGroup, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::WhatsApp.Web.Chats.Grpc.Protos.Chat.CreateGroupRequest, global::WhatsApp.Web.Chats.Grpc.Protos.Chat.MessageResponse>(serviceImpl.CreateGroup));
+      serviceBinder.AddMethod(__Method_JoinGroup, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::WhatsApp.Web.Chats.Grpc.Protos.Chat.JoinGroupRequest, global::WhatsApp.Web.Chats.Grpc.Protos.Chat.MessageResponse>(serviceImpl.JoinGroup));
+      serviceBinder.AddMethod(__Method_LeaveGroup, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::WhatsApp.Web.Chats.Grpc.Protos.Chat.LeaveGroupRequest, global::WhatsApp.Web.Chats.Grpc.Protos.Chat.MessageResponse>(serviceImpl.LeaveGroup));
       serviceBinder.AddMethod(__Method_UserChats, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::WhatsApp.Web.Chats.Grpc.Protos.Chat.UserChatRequest, global::WhatsApp.Web.Chats.Grpc.Protos.Chat.UserChatResponse>(serviceImpl.UserChats));
+      serviceBinder.AddMethod(__Method_GetMessages, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::WhatsApp.Web.Chats.Grpc.Protos.Chat.GetMessagesRequest, global::WhatsApp.Web.Chats.Grpc.Protos.Chat.MessageListResponse>(serviceImpl.GetMessages));
     }
 
   }

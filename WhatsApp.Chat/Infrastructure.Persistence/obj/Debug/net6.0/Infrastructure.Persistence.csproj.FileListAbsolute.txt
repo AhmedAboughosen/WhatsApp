@@ -17,3 +17,10 @@ D:\PersonalProjects\backend\WhatsApp\WhatsApp.Chat\Infrastructure.Persistence\bi
 D:\PersonalProjects\backend\WhatsApp\WhatsApp.Chat\Infrastructure.Persistence\bin\Debug\net6.0\Core.Domain.pdb
 D:\PersonalProjects\backend\WhatsApp\WhatsApp.Chat\Infrastructure.Persistence\obj\Debug\net6.0\Infrastructure.Persistence.csproj.CopyComplete
 D:\PersonalProjects\backend\WhatsApp\WhatsApp.Chat\Infrastructure.Persistence\obj\Debug\net6.0\Infrastructure.Persistence.genruntimeconfig.cache
+D:\PersonalProjects\backend\WhatsApp\WhatsApp.Chat\Infrastructure.Persistence\bin\Debug\net6.0\Web.Grpc.deps.json
+D:\PersonalProjects\backend\WhatsApp\WhatsApp.Chat\Infrastructure.Persistence\bin\Debug\net6.0\Web.Grpc.runtimeconfig.json
+D:\PersonalProjects\backend\WhatsApp\WhatsApp.Chat\Infrastructure.Persistence\bin\Debug\net6.0\appsettings.Development.json
+D:\PersonalProjects\backend\WhatsApp\WhatsApp.Chat\Infrastructure.Persistence\bin\Debug\net6.0\appsettings.json
+D:\PersonalProjects\backend\WhatsApp\WhatsApp.Chat\Infrastructure.Persistence\bin\Debug\net6.0\Web.Grpc.exe
+D:\PersonalProjects\backend\WhatsApp\WhatsApp.Chat\Infrastructure.Persistence\bin\Debug\net6.0\Web.Grpc.dll
+D:\PersonalProjects\backend\WhatsApp\WhatsApp.Chat\Infrastructure.Persistence\bin\Debug\net6.0\Web.Grpc.pdb

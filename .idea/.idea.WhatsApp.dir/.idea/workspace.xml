@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="4ae5c03e-09fe-4a92-bb6f-c9cae610536f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.WhatsApp.dir/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/slnx.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/slnx.sqlite" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WhatsApp.Media/Core.Application/obj/Debug/net6.0/Core.Application.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/WhatsApp.Media/Core.Application/obj/Debug/net6.0/Core.Application.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WhatsApp.Media/Core.Application/obj/Debug/net6.0/Core.Application.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/WhatsApp.Media/Core.Application/obj/Debug/net6.0/Core.Application.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WhatsApp.Media/Core.Domain/obj/Debug/net6.0/Core.Domain.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/WhatsApp.Media/Core.Domain/obj/Debug/net6.0/Core.Domain.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WhatsApp.Media/Core.Domain/obj/Debug/net6.0/Core.Domain.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/WhatsApp.Media/Core.Domain/obj/Debug/net6.0/Core.Domain.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WhatsApp.Media/Core.Domain/obj/Debug/net6.0/Core.Domain.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/WhatsApp.Media/Core.Domain/obj/Debug/net6.0/Core.Domain.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WhatsApp.Media/Infrastructure.MessageBus/obj/Debug/net6.0/Infrastructure.MessageBus.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/WhatsApp.Media/Infrastructure.MessageBus/obj/Debug/net6.0/Infrastructure.MessageBus.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WhatsApp.Media/Infrastructure.MessageBus/obj/Debug/net6.0/Infrastructure.MessageBus.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/WhatsApp.Media/Infrastructure.MessageBus/obj/Debug/net6.0/Infrastructure.MessageBus.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WhatsApp.Media/Infrastructure.Persistence/obj/Debug/net6.0/Infrastructure.Persistence.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/WhatsApp.Media/Infrastructure.Persistence/obj/Debug/net6.0/Infrastructure.Persistence.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WhatsApp.Media/Infrastructure.Persistence/obj/Debug/net6.0/Infrastructure.Persistence.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/WhatsApp.Media/Infrastructure.Persistence/obj/Debug/net6.0/Infrastructure.Persistence.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WhatsApp.Media/Infrastructure.Services/Handler/AddProfileImageHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WhatsApp.Media/Infrastructure.Services/Handler/AddProfileImageHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WhatsApp.Media/Infrastructure.Services/obj/Debug/net6.0/Infrastructure.Services.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/WhatsApp.Media/Infrastructure.Services/obj/Debug/net6.0/Infrastructure.Services.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WhatsApp.Media/Infrastructure.Services/obj/Debug/net6.0/Infrastructure.Services.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/WhatsApp.Media/Infrastructure.Services/obj/Debug/net6.0/Infrastructure.Services.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WhatsApp.Media/Web.Grpc/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/WhatsApp.Media/Web.Grpc/appsettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WhatsApp.Media/Web.Grpc/obj/Debug/net6.0/Web.Grpc.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/WhatsApp.Media/Web.Grpc/obj/Debug/net6.0/Web.Grpc.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WhatsApp.Media/Web.Grpc/obj/Debug/net6.0/Web.Grpc.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/WhatsApp.Media/Web.Grpc/obj/Debug/net6.0/Web.Grpc.assets.cache" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2MYTPfyGkpswiAKZFeYQeWgKFRO" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "rider.external.source.directories": [
+      "C:\\Users\\a.hassan\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\DecompilerCache",
+      "C:\\Users\\a.hassan\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\SourcesCache",
+      "C:\\Users\\a.hassan\\AppData\\Local\\Symbols\\src"
+    ]
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4ae5c03e-09fe-4a92-bb6f-c9cae610536f" name="Changes" comment="" />
+      <created>1677943494286</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1677943494286</updated>
+      <workItem from="1677943498136" duration="366000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
+  <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+</project>

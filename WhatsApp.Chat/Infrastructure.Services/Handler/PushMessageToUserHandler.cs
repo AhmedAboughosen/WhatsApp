@@ -7,12 +7,12 @@ using MediatR;
 
 namespace Infrastructure.Services.Handler
 {
-    public class NewMessageCreatedHandler : IRequestHandler<NewMessageRequestDto, bool>
+    public class PushMessageToUserHandler : IRequestHandler<NewMessageRequestDto, bool>
     {
         private readonly IUnitOfWork _unitOfWork;
         private readonly INotificationBusPublisher _notificationBusPublisher;
 
-        public NewMessageCreatedHandler(IUnitOfWork unitOfWork, INotificationBusPublisher notificationBusPublisher)
+        public PushMessageToUserHandler(IUnitOfWork unitOfWork, INotificationBusPublisher notificationBusPublisher)
         {
             _unitOfWork = unitOfWork;
             _notificationBusPublisher = notificationBusPublisher;

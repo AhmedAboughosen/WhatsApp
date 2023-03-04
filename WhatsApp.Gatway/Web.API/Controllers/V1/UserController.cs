@@ -75,7 +75,8 @@ public class UserController : BaseController
                     UserId = dto.UserId,
                     Dob = dto.Dob,
                     Extension = dto.Extension,
-                    Image = ByteString.FromStream(dto.ProfileImage.OpenReadStream())
+                    Image = ByteString.FromStream(dto.ProfileImage.OpenReadStream()),
+                    FullName = dto.FullName
                 });
 
 

@@ -11,7 +11,7 @@ namespace Infrastructure.Persistence.Repositories
             _appDbContext = appDbContext;
         }
 
-        
+
         private IOutboxMessageRepository? _outboxMessageRepository;
 
         public IOutboxMessageRepository OutboxMessageRepository
@@ -36,7 +36,19 @@ namespace Infrastructure.Persistence.Repositories
             }
         }
 
-        
+
+        private IUserGroupRepository? _userGroupRepository;
+
+        public IUserGroupRepository UserGroupRepository
+        {
+            get
+            {
+                if (_userGroupRepository != null)
+                    return _userGroupRepository;
+                return _userGroupRepository = new UserGroupRepository(_appDbContext);
+            }
+        }
+
 
         private IUserRepository? _userRepository;
 

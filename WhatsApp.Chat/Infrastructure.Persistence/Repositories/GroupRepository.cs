@@ -16,6 +16,9 @@ namespace Infrastructure.Persistence.Repositories
         public Task<bool> AnyAsync(Guid groupId)
             => _appDbContext.Groups.AnyAsync(x => x.Id == groupId);
 
+        public Task<List<Group>> GetAllAsync( Guid userId)
+            => _appDbContext.Groups.Where(x => x.UserId == userId).ToListAsync();
+        
         public Task<Group?> GetAsync(Guid groupId)
             => _appDbContext.Groups.Where(x => x.Id == groupId).Include(o => o.Users).FirstOrDefaultAsync();
     }

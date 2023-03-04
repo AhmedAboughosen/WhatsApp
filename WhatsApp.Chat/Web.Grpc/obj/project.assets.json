@@ -456,6 +456,7 @@
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
           "MediatR": "11.1.0",
+          "Microsoft.EntityFrameworkCore": "7.0.2",
           "Newtonsoft.Json": "13.0.3-beta1"
         },
         "compile": {

@@ -33,6 +33,11 @@ namespace Core.Domain.Entities
 
         public User()
         {
+        } 
+        
+        public User(String userId)
+        {
+            Id =Guid.Parse(userId);
         }
 
 

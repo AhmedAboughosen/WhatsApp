@@ -32,6 +32,47 @@ namespace Web.Grpc.Services
             };
         }
 
+        public override async Task<MessageListResponse> GetMessages(GetMessagesRequest request,
+            ServerCallContext context)
+        {
+            var query = request.ToQuery();
+
+            var response = await _mediator.Send(query);
+
+            var list = new RepeatedField<MessageContentResponse>();
+
+            foreach (var message in response.MessageContentResponse)
+            {
+                list.Add(new MessageContentResponse
+                {
+                    UserInfo = new UserInfo
+                    {
+                        FullName = message.UserInfoDto.FullName,
+                        ProfileImage = message.UserInfoDto.ProfileImage,
+                    },
+                    MessageInfo = new MessageInfo
+                    {
+                        DeliveredAt = message.MessageInfoDto.DeliveredAt.ToTimestamp(),
+                        SeenAt = message.MessageInfoDto.SeenAt.ToTimestamp(),
+                        SentAt = message.MessageInfoDto.SentAt.ToTimestamp(),
+                        Content = message.MessageInfoDto.Content,
+                    }
+                });
+            }
+
+
+            return new MessageListResponse
+            {
+                PageNumber = response.PageNumber,
+                PageSize = response.PageSize,
+                TotalPages = response.TotalPages,
+                MessageContent =
+                {
+                    list
+                }
+            };
+        }
+
         public override async Task<UserChatResponse> UserChats(UserChatRequest request, ServerCallContext context)
         {
             var query = request.ToQuery();
@@ -55,6 +96,42 @@ namespace Web.Grpc.Services
             {
                 Content = { list }
             };
+        }
+
+        public override async Task<MessageResponse> CreateGroup(CreateGroupRequest request, ServerCallContext context)
+        {
+            var query = request.ToQuery();
+
+            await _mediator.Send(query);
+
+            return new MessageResponse
+            {
+                Message = "group created"
+            };
+        }
+
+
+        public override async Task<MessageResponse> PushMessageToGroup(NewGroupMessageRequest request,
+            ServerCallContext context)
+        {
+            var query = request.ToQuery();
+
+            await _mediator.Send(query);
+
+            return new MessageResponse
+            {
+                Message = "message Pushed"
+            };
+        }
+
+        public override Task<MessageResponse> JoinGroup(JoinGroupRequest request, ServerCallContext context)
+        {
+            return base.JoinGroup(request, context);
+        }
+
+        public override Task<MessageResponse> LeaveGroup(LeaveGroupRequest request, ServerCallContext context)
+        {
+            return base.LeaveGroup(request, context);
         }
     }
 }
