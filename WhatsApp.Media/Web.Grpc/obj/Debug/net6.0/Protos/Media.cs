@@ -26,17 +26,23 @@ namespace Web.Grpc.Proto.Media {
           string.Concat(
             "ChJQcm90b3MvbWVkaWEucHJvdG8SDndoYXRzYXBwLm1lZGlhIk4KGVVwbG9h",
             "ZFByb2ZpbGVJbWFnZVJlcXVlc3QSDwoHdXNlcl9pZBgBIAEoCRINCgVpbWFn",
-            "ZRgCIAEoDBIRCglleHRlbnNpb24YAyABKAkiOwoeVXBsb2FkUHJvZmlsZUlt",
-            "YWdlUmVxdWVzdFJlcGx5EhkKEXByb2ZpbGVfaW1hZ2VfdXJsGAEgASgJMngK",
-            "BU1lZGlhEm8KElVwbG9hZFByb2ZpbGVJbWFnZRIpLndoYXRzYXBwLm1lZGlh",
-            "LlVwbG9hZFByb2ZpbGVJbWFnZVJlcXVlc3QaLi53aGF0c2FwcC5tZWRpYS5V",
-            "cGxvYWRQcm9maWxlSW1hZ2VSZXF1ZXN0UmVwbHlCF6oCFFdlYi5HcnBjLlBy",
-            "b3RvLk1lZGlhYgZwcm90bzM="));
+            "ZRgCIAEoDBIRCglleHRlbnNpb24YAyABKAkiSgoVVXBsb2FkQ2hhdEZpbGVS",
+            "ZXF1ZXN0Eg8KB3VzZXJfaWQYASABKAkSDQoFZmlsZXMYAiADKAwSEQoJZXh0",
+            "ZW5zaW9uGAMgASgJIjQKF1VwbG9hZFByb2ZpbGVJbWFnZVJlcGx5EhkKEXBy",
+            "b2ZpbGVfaW1hZ2VfdXJsGAEgASgJIigKE1VwbG9hZENoYXRGaWxlUmVwbHkS",
+            "EQoJaW1hZ2VfdXJsGAEgAygJMs8BCgVNZWRpYRJoChJVcGxvYWRQcm9maWxl",
+            "SW1hZ2USKS53aGF0c2FwcC5tZWRpYS5VcGxvYWRQcm9maWxlSW1hZ2VSZXF1",
+            "ZXN0Gicud2hhdHNhcHAubWVkaWEuVXBsb2FkUHJvZmlsZUltYWdlUmVwbHkS",
+            "XAoOVXBsb2FkQ2hhdEZpbGUSJS53aGF0c2FwcC5tZWRpYS5VcGxvYWRDaGF0",
+            "RmlsZVJlcXVlc3QaIy53aGF0c2FwcC5tZWRpYS5VcGxvYWRDaGF0RmlsZVJl",
+            "cGx5QheqAhRXZWIuR3JwYy5Qcm90by5NZWRpYWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Web.Grpc.Proto.Media.UploadProfileImageRequest), global::Web.Grpc.Proto.Media.UploadProfileImageRequest.Parser, new[]{ "UserId", "Image", "Extension" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Web.Grpc.Proto.Media.UploadProfileImageRequestReply), global::Web.Grpc.Proto.Media.UploadProfileImageRequestReply.Parser, new[]{ "ProfileImageUrl" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Web.Grpc.Proto.Media.UploadChatFileRequest), global::Web.Grpc.Proto.Media.UploadChatFileRequest.Parser, new[]{ "UserId", "Files", "Extension" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Web.Grpc.Proto.Media.UploadProfileImageReply), global::Web.Grpc.Proto.Media.UploadProfileImageReply.Parser, new[]{ "ProfileImageUrl" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Web.Grpc.Proto.Media.UploadChatFileReply), global::Web.Grpc.Proto.Media.UploadChatFileReply.Parser, new[]{ "ImageUrl" }, null, null, null, null)
           }));
     }
     #endregion
@@ -287,15 +293,15 @@ namespace Web.Grpc.Proto.Media {
 
   }
 
-  public sealed partial class UploadProfileImageRequestReply : pb::IMessage<UploadProfileImageRequestReply>
+  public sealed partial class UploadChatFileRequest : pb::IMessage<UploadChatFileRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
   #endif
   {
-    private static readonly pb::MessageParser<UploadProfileImageRequestReply> _parser = new pb::MessageParser<UploadProfileImageRequestReply>(() => new UploadProfileImageRequestReply());
+    private static readonly pb::MessageParser<UploadChatFileRequest> _parser = new pb::MessageParser<UploadChatFileRequest>(() => new UploadChatFileRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<UploadProfileImageRequestReply> Parser { get { return _parser; } }
+    public static pb::MessageParser<UploadChatFileRequest> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
@@ -308,21 +314,254 @@ namespace Web.Grpc.Proto.Media {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public UploadProfileImageRequestReply() {
+    public UploadChatFileRequest() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public UploadProfileImageRequestReply(UploadProfileImageRequestReply other) : this() {
+    public UploadChatFileRequest(UploadChatFileRequest other) : this() {
+      userId_ = other.userId_;
+      files_ = other.files_.Clone();
+      extension_ = other.extension_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public UploadChatFileRequest Clone() {
+      return new UploadChatFileRequest(this);
+    }
+
+    /// <summary>Field number for the "user_id" field.</summary>
+    public const int UserIdFieldNumber = 1;
+    private string userId_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string UserId {
+      get { return userId_; }
+      set {
+        userId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "files" field.</summary>
+    public const int FilesFieldNumber = 2;
+    private static readonly pb::FieldCodec<pb::ByteString> _repeated_files_codec
+        = pb::FieldCodec.ForBytes(18);
+    private readonly pbc::RepeatedField<pb::ByteString> files_ = new pbc::RepeatedField<pb::ByteString>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<pb::ByteString> Files {
+      get { return files_; }
+    }
+
+    /// <summary>Field number for the "extension" field.</summary>
+    public const int ExtensionFieldNumber = 3;
+    private string extension_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Extension {
+      get { return extension_; }
+      set {
+        extension_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as UploadChatFileRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(UploadChatFileRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (UserId != other.UserId) return false;
+      if(!files_.Equals(other.files_)) return false;
+      if (Extension != other.Extension) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (UserId.Length != 0) hash ^= UserId.GetHashCode();
+      hash ^= files_.GetHashCode();
+      if (Extension.Length != 0) hash ^= Extension.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (UserId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(UserId);
+      }
+      files_.WriteTo(output, _repeated_files_codec);
+      if (Extension.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Extension);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (UserId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(UserId);
+      }
+      files_.WriteTo(ref output, _repeated_files_codec);
+      if (Extension.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Extension);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (UserId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(UserId);
+      }
+      size += files_.CalculateSize(_repeated_files_codec);
+      if (Extension.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Extension);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(UploadChatFileRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.UserId.Length != 0) {
+        UserId = other.UserId;
+      }
+      files_.Add(other.files_);
+      if (other.Extension.Length != 0) {
+        Extension = other.Extension;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            UserId = input.ReadString();
+            break;
+          }
+          case 18: {
+            files_.AddEntriesFrom(input, _repeated_files_codec);
+            break;
+          }
+          case 26: {
+            Extension = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            UserId = input.ReadString();
+            break;
+          }
+          case 18: {
+            files_.AddEntriesFrom(ref input, _repeated_files_codec);
+            break;
+          }
+          case 26: {
+            Extension = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  public sealed partial class UploadProfileImageReply : pb::IMessage<UploadProfileImageReply>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<UploadProfileImageReply> _parser = new pb::MessageParser<UploadProfileImageReply>(() => new UploadProfileImageReply());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<UploadProfileImageReply> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Web.Grpc.Proto.Media.MediaReflection.Descriptor.MessageTypes[2]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public UploadProfileImageReply() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public UploadProfileImageReply(UploadProfileImageReply other) : this() {
       profileImageUrl_ = other.profileImageUrl_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public UploadProfileImageRequestReply Clone() {
-      return new UploadProfileImageRequestReply(this);
+    public UploadProfileImageReply Clone() {
+      return new UploadProfileImageReply(this);
     }
 
     /// <summary>Field number for the "profile_image_url" field.</summary>
@@ -338,11 +577,11 @@ namespace Web.Grpc.Proto.Media {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
-      return Equals(other as UploadProfileImageRequestReply);
+      return Equals(other as UploadProfileImageReply);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(UploadProfileImageRequestReply other) {
+    public bool Equals(UploadProfileImageReply other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
@@ -409,7 +648,7 @@ namespace Web.Grpc.Proto.Media {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(UploadProfileImageRequestReply other) {
+    public void MergeFrom(UploadProfileImageReply other) {
       if (other == null) {
         return;
       }
@@ -450,6 +689,167 @@ namespace Web.Grpc.Proto.Media {
             break;
           case 10: {
             ProfileImageUrl = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  public sealed partial class UploadChatFileReply : pb::IMessage<UploadChatFileReply>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<UploadChatFileReply> _parser = new pb::MessageParser<UploadChatFileReply>(() => new UploadChatFileReply());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<UploadChatFileReply> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Web.Grpc.Proto.Media.MediaReflection.Descriptor.MessageTypes[3]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public UploadChatFileReply() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public UploadChatFileReply(UploadChatFileReply other) : this() {
+      imageUrl_ = other.imageUrl_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public UploadChatFileReply Clone() {
+      return new UploadChatFileReply(this);
+    }
+
+    /// <summary>Field number for the "image_url" field.</summary>
+    public const int ImageUrlFieldNumber = 1;
+    private static readonly pb::FieldCodec<string> _repeated_imageUrl_codec
+        = pb::FieldCodec.ForString(10);
+    private readonly pbc::RepeatedField<string> imageUrl_ = new pbc::RepeatedField<string>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<string> ImageUrl {
+      get { return imageUrl_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as UploadChatFileReply);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(UploadChatFileReply other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!imageUrl_.Equals(other.imageUrl_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= imageUrl_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      imageUrl_.WriteTo(output, _repeated_imageUrl_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      imageUrl_.WriteTo(ref output, _repeated_imageUrl_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      size += imageUrl_.CalculateSize(_repeated_imageUrl_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(UploadChatFileReply other) {
+      if (other == null) {
+        return;
+      }
+      imageUrl_.Add(other.imageUrl_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            imageUrl_.AddEntriesFrom(input, _repeated_imageUrl_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            imageUrl_.AddEntriesFrom(ref input, _repeated_imageUrl_codec);
             break;
           }
         }

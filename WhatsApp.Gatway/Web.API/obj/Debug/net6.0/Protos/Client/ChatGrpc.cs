@@ -7,7 +7,7 @@
 
 using grpc = global::Grpc.Core;
 
-namespace WhatsApp.Gateway.Proto.Client.Chat {
+namespace WhatsApp.Gateway.Protos.Chat {
   public static partial class Chat
   {
     static readonly string __ServiceName = "whatsapp.chat.Chat";
@@ -46,16 +46,28 @@ namespace WhatsApp.Gateway.Proto.Client.Chat {
     }
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::WhatsApp.Gateway.Proto.Client.Chat.NewMessageRequest> __Marshaller_whatsapp_chat_NewMessageRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::WhatsApp.Gateway.Proto.Client.Chat.NewMessageRequest.Parser));
+    static readonly grpc::Marshaller<global::WhatsApp.Gateway.Protos.Chat.NewMessageRequest> __Marshaller_whatsapp_chat_NewMessageRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::WhatsApp.Gateway.Protos.Chat.NewMessageRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::WhatsApp.Gateway.Proto.Client.Chat.MessageResponse> __Marshaller_whatsapp_chat_MessageResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::WhatsApp.Gateway.Proto.Client.Chat.MessageResponse.Parser));
+    static readonly grpc::Marshaller<global::WhatsApp.Gateway.Protos.Chat.MessageResponse> __Marshaller_whatsapp_chat_MessageResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::WhatsApp.Gateway.Protos.Chat.MessageResponse.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::WhatsApp.Gateway.Proto.Client.Chat.UserChatRequest> __Marshaller_whatsapp_chat_UserChatRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::WhatsApp.Gateway.Proto.Client.Chat.UserChatRequest.Parser));
+    static readonly grpc::Marshaller<global::WhatsApp.Gateway.Protos.Chat.NewGroupMessageRequest> __Marshaller_whatsapp_chat_NewGroupMessageRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::WhatsApp.Gateway.Protos.Chat.NewGroupMessageRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::WhatsApp.Gateway.Proto.Client.Chat.UserChatResponse> __Marshaller_whatsapp_chat_UserChatResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::WhatsApp.Gateway.Proto.Client.Chat.UserChatResponse.Parser));
+    static readonly grpc::Marshaller<global::WhatsApp.Gateway.Protos.Chat.CreateGroupRequest> __Marshaller_whatsapp_chat_CreateGroupRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::WhatsApp.Gateway.Protos.Chat.CreateGroupRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::WhatsApp.Gateway.Protos.Chat.JoinGroupRequest> __Marshaller_whatsapp_chat_JoinGroupRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::WhatsApp.Gateway.Protos.Chat.JoinGroupRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::WhatsApp.Gateway.Protos.Chat.LeaveGroupRequest> __Marshaller_whatsapp_chat_LeaveGroupRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::WhatsApp.Gateway.Protos.Chat.LeaveGroupRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::WhatsApp.Gateway.Protos.Chat.UserChatRequest> __Marshaller_whatsapp_chat_UserChatRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::WhatsApp.Gateway.Protos.Chat.UserChatRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::WhatsApp.Gateway.Protos.Chat.UserChatResponse> __Marshaller_whatsapp_chat_UserChatResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::WhatsApp.Gateway.Protos.Chat.UserChatResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::WhatsApp.Gateway.Protos.Chat.GetMessagesRequest> __Marshaller_whatsapp_chat_GetMessagesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::WhatsApp.Gateway.Protos.Chat.GetMessagesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::WhatsApp.Gateway.Protos.Chat.MessageListResponse> __Marshaller_whatsapp_chat_MessageListResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::WhatsApp.Gateway.Protos.Chat.MessageListResponse.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Method<global::WhatsApp.Gateway.Proto.Client.Chat.NewMessageRequest, global::WhatsApp.Gateway.Proto.Client.Chat.MessageResponse> __Method_PushMessageToUser = new grpc::Method<global::WhatsApp.Gateway.Proto.Client.Chat.NewMessageRequest, global::WhatsApp.Gateway.Proto.Client.Chat.MessageResponse>(
+    static readonly grpc::Method<global::WhatsApp.Gateway.Protos.Chat.NewMessageRequest, global::WhatsApp.Gateway.Protos.Chat.MessageResponse> __Method_PushMessageToUser = new grpc::Method<global::WhatsApp.Gateway.Protos.Chat.NewMessageRequest, global::WhatsApp.Gateway.Protos.Chat.MessageResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "PushMessageToUser",
@@ -63,25 +75,57 @@ namespace WhatsApp.Gateway.Proto.Client.Chat {
         __Marshaller_whatsapp_chat_MessageResponse);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Method<global::WhatsApp.Gateway.Proto.Client.Chat.NewMessageRequest, global::WhatsApp.Gateway.Proto.Client.Chat.MessageResponse> __Method_PushMessageToGroup = new grpc::Method<global::WhatsApp.Gateway.Proto.Client.Chat.NewMessageRequest, global::WhatsApp.Gateway.Proto.Client.Chat.MessageResponse>(
+    static readonly grpc::Method<global::WhatsApp.Gateway.Protos.Chat.NewGroupMessageRequest, global::WhatsApp.Gateway.Protos.Chat.MessageResponse> __Method_PushMessageToGroup = new grpc::Method<global::WhatsApp.Gateway.Protos.Chat.NewGroupMessageRequest, global::WhatsApp.Gateway.Protos.Chat.MessageResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "PushMessageToGroup",
-        __Marshaller_whatsapp_chat_NewMessageRequest,
+        __Marshaller_whatsapp_chat_NewGroupMessageRequest,
         __Marshaller_whatsapp_chat_MessageResponse);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Method<global::WhatsApp.Gateway.Proto.Client.Chat.UserChatRequest, global::WhatsApp.Gateway.Proto.Client.Chat.UserChatResponse> __Method_UserChats = new grpc::Method<global::WhatsApp.Gateway.Proto.Client.Chat.UserChatRequest, global::WhatsApp.Gateway.Proto.Client.Chat.UserChatResponse>(
+    static readonly grpc::Method<global::WhatsApp.Gateway.Protos.Chat.CreateGroupRequest, global::WhatsApp.Gateway.Protos.Chat.MessageResponse> __Method_CreateGroup = new grpc::Method<global::WhatsApp.Gateway.Protos.Chat.CreateGroupRequest, global::WhatsApp.Gateway.Protos.Chat.MessageResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateGroup",
+        __Marshaller_whatsapp_chat_CreateGroupRequest,
+        __Marshaller_whatsapp_chat_MessageResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::WhatsApp.Gateway.Protos.Chat.JoinGroupRequest, global::WhatsApp.Gateway.Protos.Chat.MessageResponse> __Method_JoinGroup = new grpc::Method<global::WhatsApp.Gateway.Protos.Chat.JoinGroupRequest, global::WhatsApp.Gateway.Protos.Chat.MessageResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "JoinGroup",
+        __Marshaller_whatsapp_chat_JoinGroupRequest,
+        __Marshaller_whatsapp_chat_MessageResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::WhatsApp.Gateway.Protos.Chat.LeaveGroupRequest, global::WhatsApp.Gateway.Protos.Chat.MessageResponse> __Method_LeaveGroup = new grpc::Method<global::WhatsApp.Gateway.Protos.Chat.LeaveGroupRequest, global::WhatsApp.Gateway.Protos.Chat.MessageResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "LeaveGroup",
+        __Marshaller_whatsapp_chat_LeaveGroupRequest,
+        __Marshaller_whatsapp_chat_MessageResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::WhatsApp.Gateway.Protos.Chat.UserChatRequest, global::WhatsApp.Gateway.Protos.Chat.UserChatResponse> __Method_UserChats = new grpc::Method<global::WhatsApp.Gateway.Protos.Chat.UserChatRequest, global::WhatsApp.Gateway.Protos.Chat.UserChatResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "UserChats",
         __Marshaller_whatsapp_chat_UserChatRequest,
         __Marshaller_whatsapp_chat_UserChatResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::WhatsApp.Gateway.Protos.Chat.GetMessagesRequest, global::WhatsApp.Gateway.Protos.Chat.MessageListResponse> __Method_GetMessages = new grpc::Method<global::WhatsApp.Gateway.Protos.Chat.GetMessagesRequest, global::WhatsApp.Gateway.Protos.Chat.MessageListResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetMessages",
+        __Marshaller_whatsapp_chat_GetMessagesRequest,
+        __Marshaller_whatsapp_chat_MessageListResponse);
+
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
     {
-      get { return global::WhatsApp.Gateway.Proto.Client.Chat.ChatReflection.Descriptor.Services[0]; }
+      get { return global::WhatsApp.Gateway.Protos.Chat.ChatReflection.Descriptor.Services[0]; }
     }
 
     /// <summary>Client for Chat</summary>
@@ -112,64 +156,144 @@ namespace WhatsApp.Gateway.Proto.Client.Chat {
       }
 
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::WhatsApp.Gateway.Proto.Client.Chat.MessageResponse PushMessageToUser(global::WhatsApp.Gateway.Proto.Client.Chat.NewMessageRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::WhatsApp.Gateway.Protos.Chat.MessageResponse PushMessageToUser(global::WhatsApp.Gateway.Protos.Chat.NewMessageRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return PushMessageToUser(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::WhatsApp.Gateway.Proto.Client.Chat.MessageResponse PushMessageToUser(global::WhatsApp.Gateway.Proto.Client.Chat.NewMessageRequest request, grpc::CallOptions options)
+      public virtual global::WhatsApp.Gateway.Protos.Chat.MessageResponse PushMessageToUser(global::WhatsApp.Gateway.Protos.Chat.NewMessageRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_PushMessageToUser, null, options, request);
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::WhatsApp.Gateway.Proto.Client.Chat.MessageResponse> PushMessageToUserAsync(global::WhatsApp.Gateway.Proto.Client.Chat.NewMessageRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::WhatsApp.Gateway.Protos.Chat.MessageResponse> PushMessageToUserAsync(global::WhatsApp.Gateway.Protos.Chat.NewMessageRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return PushMessageToUserAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::WhatsApp.Gateway.Proto.Client.Chat.MessageResponse> PushMessageToUserAsync(global::WhatsApp.Gateway.Proto.Client.Chat.NewMessageRequest request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::WhatsApp.Gateway.Protos.Chat.MessageResponse> PushMessageToUserAsync(global::WhatsApp.Gateway.Protos.Chat.NewMessageRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_PushMessageToUser, null, options, request);
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::WhatsApp.Gateway.Proto.Client.Chat.MessageResponse PushMessageToGroup(global::WhatsApp.Gateway.Proto.Client.Chat.NewMessageRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::WhatsApp.Gateway.Protos.Chat.MessageResponse PushMessageToGroup(global::WhatsApp.Gateway.Protos.Chat.NewGroupMessageRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return PushMessageToGroup(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::WhatsApp.Gateway.Proto.Client.Chat.MessageResponse PushMessageToGroup(global::WhatsApp.Gateway.Proto.Client.Chat.NewMessageRequest request, grpc::CallOptions options)
+      public virtual global::WhatsApp.Gateway.Protos.Chat.MessageResponse PushMessageToGroup(global::WhatsApp.Gateway.Protos.Chat.NewGroupMessageRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_PushMessageToGroup, null, options, request);
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::WhatsApp.Gateway.Proto.Client.Chat.MessageResponse> PushMessageToGroupAsync(global::WhatsApp.Gateway.Proto.Client.Chat.NewMessageRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::WhatsApp.Gateway.Protos.Chat.MessageResponse> PushMessageToGroupAsync(global::WhatsApp.Gateway.Protos.Chat.NewGroupMessageRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return PushMessageToGroupAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::WhatsApp.Gateway.Proto.Client.Chat.MessageResponse> PushMessageToGroupAsync(global::WhatsApp.Gateway.Proto.Client.Chat.NewMessageRequest request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::WhatsApp.Gateway.Protos.Chat.MessageResponse> PushMessageToGroupAsync(global::WhatsApp.Gateway.Protos.Chat.NewGroupMessageRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_PushMessageToGroup, null, options, request);
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::WhatsApp.Gateway.Proto.Client.Chat.UserChatResponse UserChats(global::WhatsApp.Gateway.Proto.Client.Chat.UserChatRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::WhatsApp.Gateway.Protos.Chat.MessageResponse CreateGroup(global::WhatsApp.Gateway.Protos.Chat.CreateGroupRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateGroup(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::WhatsApp.Gateway.Protos.Chat.MessageResponse CreateGroup(global::WhatsApp.Gateway.Protos.Chat.CreateGroupRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateGroup, null, options, request);
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::WhatsApp.Gateway.Protos.Chat.MessageResponse> CreateGroupAsync(global::WhatsApp.Gateway.Protos.Chat.CreateGroupRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateGroupAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::WhatsApp.Gateway.Protos.Chat.MessageResponse> CreateGroupAsync(global::WhatsApp.Gateway.Protos.Chat.CreateGroupRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateGroup, null, options, request);
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::WhatsApp.Gateway.Protos.Chat.MessageResponse JoinGroup(global::WhatsApp.Gateway.Protos.Chat.JoinGroupRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return JoinGroup(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::WhatsApp.Gateway.Protos.Chat.MessageResponse JoinGroup(global::WhatsApp.Gateway.Protos.Chat.JoinGroupRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_JoinGroup, null, options, request);
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::WhatsApp.Gateway.Protos.Chat.MessageResponse> JoinGroupAsync(global::WhatsApp.Gateway.Protos.Chat.JoinGroupRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return JoinGroupAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::WhatsApp.Gateway.Protos.Chat.MessageResponse> JoinGroupAsync(global::WhatsApp.Gateway.Protos.Chat.JoinGroupRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_JoinGroup, null, options, request);
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::WhatsApp.Gateway.Protos.Chat.MessageResponse LeaveGroup(global::WhatsApp.Gateway.Protos.Chat.LeaveGroupRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return LeaveGroup(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::WhatsApp.Gateway.Protos.Chat.MessageResponse LeaveGroup(global::WhatsApp.Gateway.Protos.Chat.LeaveGroupRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_LeaveGroup, null, options, request);
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::WhatsApp.Gateway.Protos.Chat.MessageResponse> LeaveGroupAsync(global::WhatsApp.Gateway.Protos.Chat.LeaveGroupRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return LeaveGroupAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::WhatsApp.Gateway.Protos.Chat.MessageResponse> LeaveGroupAsync(global::WhatsApp.Gateway.Protos.Chat.LeaveGroupRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_LeaveGroup, null, options, request);
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::WhatsApp.Gateway.Protos.Chat.UserChatResponse UserChats(global::WhatsApp.Gateway.Protos.Chat.UserChatRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UserChats(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::WhatsApp.Gateway.Proto.Client.Chat.UserChatResponse UserChats(global::WhatsApp.Gateway.Proto.Client.Chat.UserChatRequest request, grpc::CallOptions options)
+      public virtual global::WhatsApp.Gateway.Protos.Chat.UserChatResponse UserChats(global::WhatsApp.Gateway.Protos.Chat.UserChatRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_UserChats, null, options, request);
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::WhatsApp.Gateway.Proto.Client.Chat.UserChatResponse> UserChatsAsync(global::WhatsApp.Gateway.Proto.Client.Chat.UserChatRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::WhatsApp.Gateway.Protos.Chat.UserChatResponse> UserChatsAsync(global::WhatsApp.Gateway.Protos.Chat.UserChatRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UserChatsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::WhatsApp.Gateway.Proto.Client.Chat.UserChatResponse> UserChatsAsync(global::WhatsApp.Gateway.Proto.Client.Chat.UserChatRequest request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::WhatsApp.Gateway.Protos.Chat.UserChatResponse> UserChatsAsync(global::WhatsApp.Gateway.Protos.Chat.UserChatRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_UserChats, null, options, request);
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::WhatsApp.Gateway.Protos.Chat.MessageListResponse GetMessages(global::WhatsApp.Gateway.Protos.Chat.GetMessagesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetMessages(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::WhatsApp.Gateway.Protos.Chat.MessageListResponse GetMessages(global::WhatsApp.Gateway.Protos.Chat.GetMessagesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetMessages, null, options, request);
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::WhatsApp.Gateway.Protos.Chat.MessageListResponse> GetMessagesAsync(global::WhatsApp.Gateway.Protos.Chat.GetMessagesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetMessagesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::WhatsApp.Gateway.Protos.Chat.MessageListResponse> GetMessagesAsync(global::WhatsApp.Gateway.Protos.Chat.GetMessagesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetMessages, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]

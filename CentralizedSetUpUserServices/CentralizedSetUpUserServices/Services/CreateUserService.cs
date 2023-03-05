@@ -37,7 +37,7 @@ public class CreateUserService : CreateUser.CreateUserBase
 
     public override async Task<MessageResponse> SetUpAccount(SetUpAccountRequest request, ServerCallContext context)
     {
-        UploadProfileImageRequestReply mediaResponse;
+        UploadProfileImageReply mediaResponse;
 
         try
         {

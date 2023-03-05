@@ -13,8 +13,7 @@
           "MediatR": "11.1.0",
           "MediatR.Extensions.Microsoft.DependencyInjection": "11.1.0",
           "Microsoft.AspNetCore.Identity": "2.2.0",
-          "Microsoft.Extensions.Identity.Core": "6.0.13",
-          "Microsoft.Extensions.Options.ConfigurationExtensions": "6.0.2-mauipre.1.22102.15"
+          "Microsoft.Extensions.Identity.Core": "6.0.13"
         },
         "runtime": {
           "Infrastructure.Services.dll": {}
@@ -179,7 +178,7 @@
       "Microsoft.AspNetCore.Hosting.Server.Abstractions/2.2.0": {
         "dependencies": {
           "Microsoft.AspNetCore.Http.Features": "2.2.0",
-          "Microsoft.Extensions.Configuration.Abstractions": "6.0.2-mauipre.1.22102.15"
+          "Microsoft.Extensions.Configuration.Abstractions": "2.2.0"
         },
         "runtime": {
           "lib/netstandard2.0/Microsoft.AspNetCore.Hosting.Server.Abstractions.dll": {
@@ -316,25 +315,14 @@
           }
         }
       },
-      "Microsoft.Extensions.Configuration.Abstractions/6.0.2-mauipre.1.22102.15": {
+      "Microsoft.Extensions.Configuration.Abstractions/2.2.0": {
         "dependencies": {
           "Microsoft.Extensions.Primitives": "7.0.0"
         },
         "runtime": {
           "lib/netstandard2.0/Microsoft.Extensions.Configuration.Abstractions.dll": {
-            "assemblyVersion": "6.0.0.0",
-            "fileVersion": "6.0.222.10215"
-          }
-        }
-      },
-      "Microsoft.Extensions.Configuration.Binder/6.0.2-mauipre.1.22102.15": {
-        "dependencies": {
-          "Microsoft.Extensions.Configuration.Abstractions": "6.0.2-mauipre.1.22102.15"
-        },
-        "runtime": {
-          "lib/netstandard2.0/Microsoft.Extensions.Configuration.Binder.dll": {
-            "assemblyVersion": "6.0.0.0",
-            "fileVersion": "6.0.222.10215"
+            "assemblyVersion": "2.2.0.0",
+            "fileVersion": "2.2.0.18315"
           }
         }
       },
@@ -370,7 +358,7 @@
       },
       "Microsoft.Extensions.Hosting.Abstractions/2.2.0": {
         "dependencies": {
-          "Microsoft.Extensions.Configuration.Abstractions": "6.0.2-mauipre.1.22102.15",
+          "Microsoft.Extensions.Configuration.Abstractions": "2.2.0",
           "Microsoft.Extensions.DependencyInjection.Abstractions": "7.0.0",
           "Microsoft.Extensions.FileProviders.Abstractions": "2.2.0",
           "Microsoft.Extensions.Logging.Abstractions": "7.0.0"
@@ -434,21 +422,6 @@
           "lib/net6.0/Microsoft.Extensions.Options.dll": {
             "assemblyVersion": "7.0.0.0",
             "fileVersion": "7.0.22.51805"
-          }
-        }
-      },
-      "Microsoft.Extensions.Options.ConfigurationExtensions/6.0.2-mauipre.1.22102.15": {
-        "dependencies": {
-          "Microsoft.Extensions.Configuration.Abstractions": "6.0.2-mauipre.1.22102.15",
-          "Microsoft.Extensions.Configuration.Binder": "6.0.2-mauipre.1.22102.15",
-          "Microsoft.Extensions.DependencyInjection.Abstractions": "7.0.0",
-          "Microsoft.Extensions.Options": "7.0.0",
-          "Microsoft.Extensions.Primitives": "7.0.0"
-        },
-        "runtime": {
-          "lib/netstandard2.0/Microsoft.Extensions.Options.ConfigurationExtensions.dll": {
-            "assemblyVersion": "6.0.0.0",
-            "fileVersion": "6.0.222.10215"
           }
         }
       },
@@ -769,19 +742,12 @@
       "path": "microsoft.extensions.caching.memory/7.0.0",
       "hashPath": "microsoft.extensions.caching.memory.7.0.0.nupkg.sha512"
     },
-    "Microsoft.Extensions.Configuration.Abstractions/6.0.2-mauipre.1.22102.15": {
+    "Microsoft.Extensions.Configuration.Abstractions/2.2.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-g+hdHEfm/QK4Zs59gftVQYYyfR/P7VDjCOaG2I+q6dLc2FKV/0PonAvt6X0mctCv8GluKsBXaWTgYVSSy4dpmA==",
-      "path": "microsoft.extensions.configuration.abstractions/6.0.2-mauipre.1.22102.15",
-      "hashPath": "microsoft.extensions.configuration.abstractions.6.0.2-mauipre.1.22102.15.nupkg.sha512"
-    },
-    "Microsoft.Extensions.Configuration.Binder/6.0.2-mauipre.1.22102.15": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-d6JRnIwAnLS4FYF+KmMh4a3Y6d7qFokud7OY6TTZPx3yAp2dCj0fE73PbI3MvAyShmsGQi4EaSoybe1QrVpvXQ==",
-      "path": "microsoft.extensions.configuration.binder/6.0.2-mauipre.1.22102.15",
-      "hashPath": "microsoft.extensions.configuration.binder.6.0.2-mauipre.1.22102.15.nupkg.sha512"
+      "sha512": "sha512-65MrmXCziWaQFrI0UHkQbesrX5wTwf9XPjY5yFm/VkgJKFJ5gqvXRoXjIZcf2wLi5ZlwGz/oMYfyURVCWbM5iw==",
+      "path": "microsoft.extensions.configuration.abstractions/2.2.0",
+      "hashPath": "microsoft.extensions.configuration.abstractions.2.2.0.nupkg.sha512"
     },
     "Microsoft.Extensions.DependencyInjection/7.0.0": {
       "type": "package",
@@ -845,13 +811,6 @@
       "sha512": "sha512-lP1yBnTTU42cKpMozuafbvNtQ7QcBjr/CcK3bYOGEMH55Fjt+iecXjT6chR7vbgCMqy3PG3aNQSZgo/EuY/9qQ==",
       "path": "microsoft.extensions.options/7.0.0",
       "hashPath": "microsoft.extensions.options.7.0.0.nupkg.sha512"
-    },
-    "Microsoft.Extensions.Options.ConfigurationExtensions/6.0.2-mauipre.1.22102.15": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-rurvZRGtHcwhHXVHhJbuNczyTGPn7MhYO8gVa+ayR2PGAAwNcYoQEcS7kLqmvkvH5l6OhTCU4mI3u4FG96SdgQ==",
-      "path": "microsoft.extensions.options.configurationextensions/6.0.2-mauipre.1.22102.15",
-      "hashPath": "microsoft.extensions.options.configurationextensions.6.0.2-mauipre.1.22102.15.nupkg.sha512"
     },
     "Microsoft.Extensions.Primitives/7.0.0": {
       "type": "package",

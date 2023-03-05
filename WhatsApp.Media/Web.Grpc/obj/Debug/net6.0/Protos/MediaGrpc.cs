@@ -48,15 +48,27 @@ namespace Web.Grpc.Proto.Media {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Web.Grpc.Proto.Media.UploadProfileImageRequest> __Marshaller_whatsapp_media_UploadProfileImageRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Web.Grpc.Proto.Media.UploadProfileImageRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::Web.Grpc.Proto.Media.UploadProfileImageRequestReply> __Marshaller_whatsapp_media_UploadProfileImageRequestReply = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Web.Grpc.Proto.Media.UploadProfileImageRequestReply.Parser));
+    static readonly grpc::Marshaller<global::Web.Grpc.Proto.Media.UploadProfileImageReply> __Marshaller_whatsapp_media_UploadProfileImageReply = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Web.Grpc.Proto.Media.UploadProfileImageReply.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Web.Grpc.Proto.Media.UploadChatFileRequest> __Marshaller_whatsapp_media_UploadChatFileRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Web.Grpc.Proto.Media.UploadChatFileRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Web.Grpc.Proto.Media.UploadChatFileReply> __Marshaller_whatsapp_media_UploadChatFileReply = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Web.Grpc.Proto.Media.UploadChatFileReply.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Method<global::Web.Grpc.Proto.Media.UploadProfileImageRequest, global::Web.Grpc.Proto.Media.UploadProfileImageRequestReply> __Method_UploadProfileImage = new grpc::Method<global::Web.Grpc.Proto.Media.UploadProfileImageRequest, global::Web.Grpc.Proto.Media.UploadProfileImageRequestReply>(
+    static readonly grpc::Method<global::Web.Grpc.Proto.Media.UploadProfileImageRequest, global::Web.Grpc.Proto.Media.UploadProfileImageReply> __Method_UploadProfileImage = new grpc::Method<global::Web.Grpc.Proto.Media.UploadProfileImageRequest, global::Web.Grpc.Proto.Media.UploadProfileImageReply>(
         grpc::MethodType.Unary,
         __ServiceName,
         "UploadProfileImage",
         __Marshaller_whatsapp_media_UploadProfileImageRequest,
-        __Marshaller_whatsapp_media_UploadProfileImageRequestReply);
+        __Marshaller_whatsapp_media_UploadProfileImageReply);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Web.Grpc.Proto.Media.UploadChatFileRequest, global::Web.Grpc.Proto.Media.UploadChatFileReply> __Method_UploadChatFile = new grpc::Method<global::Web.Grpc.Proto.Media.UploadChatFileRequest, global::Web.Grpc.Proto.Media.UploadChatFileReply>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UploadChatFile",
+        __Marshaller_whatsapp_media_UploadChatFileRequest,
+        __Marshaller_whatsapp_media_UploadChatFileReply);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -69,7 +81,13 @@ namespace Web.Grpc.Proto.Media {
     public abstract partial class MediaBase
     {
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::System.Threading.Tasks.Task<global::Web.Grpc.Proto.Media.UploadProfileImageRequestReply> UploadProfileImage(global::Web.Grpc.Proto.Media.UploadProfileImageRequest request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::Web.Grpc.Proto.Media.UploadProfileImageReply> UploadProfileImage(global::Web.Grpc.Proto.Media.UploadProfileImageRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Web.Grpc.Proto.Media.UploadChatFileReply> UploadChatFile(global::Web.Grpc.Proto.Media.UploadChatFileRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -82,7 +100,8 @@ namespace Web.Grpc.Proto.Media {
     public static grpc::ServerServiceDefinition BindService(MediaBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
-          .AddMethod(__Method_UploadProfileImage, serviceImpl.UploadProfileImage).Build();
+          .AddMethod(__Method_UploadProfileImage, serviceImpl.UploadProfileImage)
+          .AddMethod(__Method_UploadChatFile, serviceImpl.UploadChatFile).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
@@ -92,7 +111,8 @@ namespace Web.Grpc.Proto.Media {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static void BindService(grpc::ServiceBinderBase serviceBinder, MediaBase serviceImpl)
     {
-      serviceBinder.AddMethod(__Method_UploadProfileImage, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Web.Grpc.Proto.Media.UploadProfileImageRequest, global::Web.Grpc.Proto.Media.UploadProfileImageRequestReply>(serviceImpl.UploadProfileImage));
+      serviceBinder.AddMethod(__Method_UploadProfileImage, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Web.Grpc.Proto.Media.UploadProfileImageRequest, global::Web.Grpc.Proto.Media.UploadProfileImageReply>(serviceImpl.UploadProfileImage));
+      serviceBinder.AddMethod(__Method_UploadChatFile, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Web.Grpc.Proto.Media.UploadChatFileRequest, global::Web.Grpc.Proto.Media.UploadChatFileReply>(serviceImpl.UploadChatFile));
     }
 
   }

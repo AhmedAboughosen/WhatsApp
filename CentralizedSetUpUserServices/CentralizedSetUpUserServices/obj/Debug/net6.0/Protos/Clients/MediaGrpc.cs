@@ -48,15 +48,27 @@ namespace Web.Proto.Media {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Web.Proto.Media.UploadProfileImageRequest> __Marshaller_whatsapp_media_UploadProfileImageRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Web.Proto.Media.UploadProfileImageRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::Web.Proto.Media.UploadProfileImageRequestReply> __Marshaller_whatsapp_media_UploadProfileImageRequestReply = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Web.Proto.Media.UploadProfileImageRequestReply.Parser));
+    static readonly grpc::Marshaller<global::Web.Proto.Media.UploadProfileImageReply> __Marshaller_whatsapp_media_UploadProfileImageReply = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Web.Proto.Media.UploadProfileImageReply.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Web.Proto.Media.UploadChatFileRequest> __Marshaller_whatsapp_media_UploadChatFileRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Web.Proto.Media.UploadChatFileRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Web.Proto.Media.UploadChatFileReply> __Marshaller_whatsapp_media_UploadChatFileReply = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Web.Proto.Media.UploadChatFileReply.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Method<global::Web.Proto.Media.UploadProfileImageRequest, global::Web.Proto.Media.UploadProfileImageRequestReply> __Method_UploadProfileImage = new grpc::Method<global::Web.Proto.Media.UploadProfileImageRequest, global::Web.Proto.Media.UploadProfileImageRequestReply>(
+    static readonly grpc::Method<global::Web.Proto.Media.UploadProfileImageRequest, global::Web.Proto.Media.UploadProfileImageReply> __Method_UploadProfileImage = new grpc::Method<global::Web.Proto.Media.UploadProfileImageRequest, global::Web.Proto.Media.UploadProfileImageReply>(
         grpc::MethodType.Unary,
         __ServiceName,
         "UploadProfileImage",
         __Marshaller_whatsapp_media_UploadProfileImageRequest,
-        __Marshaller_whatsapp_media_UploadProfileImageRequestReply);
+        __Marshaller_whatsapp_media_UploadProfileImageReply);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Web.Proto.Media.UploadChatFileRequest, global::Web.Proto.Media.UploadChatFileReply> __Method_UploadChatFile = new grpc::Method<global::Web.Proto.Media.UploadChatFileRequest, global::Web.Proto.Media.UploadChatFileReply>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UploadChatFile",
+        __Marshaller_whatsapp_media_UploadChatFileRequest,
+        __Marshaller_whatsapp_media_UploadChatFileReply);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -92,24 +104,44 @@ namespace Web.Proto.Media {
       }
 
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Web.Proto.Media.UploadProfileImageRequestReply UploadProfileImage(global::Web.Proto.Media.UploadProfileImageRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::Web.Proto.Media.UploadProfileImageReply UploadProfileImage(global::Web.Proto.Media.UploadProfileImageRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UploadProfileImage(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Web.Proto.Media.UploadProfileImageRequestReply UploadProfileImage(global::Web.Proto.Media.UploadProfileImageRequest request, grpc::CallOptions options)
+      public virtual global::Web.Proto.Media.UploadProfileImageReply UploadProfileImage(global::Web.Proto.Media.UploadProfileImageRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_UploadProfileImage, null, options, request);
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Web.Proto.Media.UploadProfileImageRequestReply> UploadProfileImageAsync(global::Web.Proto.Media.UploadProfileImageRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Web.Proto.Media.UploadProfileImageReply> UploadProfileImageAsync(global::Web.Proto.Media.UploadProfileImageRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UploadProfileImageAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Web.Proto.Media.UploadProfileImageRequestReply> UploadProfileImageAsync(global::Web.Proto.Media.UploadProfileImageRequest request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::Web.Proto.Media.UploadProfileImageReply> UploadProfileImageAsync(global::Web.Proto.Media.UploadProfileImageRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_UploadProfileImage, null, options, request);
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Web.Proto.Media.UploadChatFileReply UploadChatFile(global::Web.Proto.Media.UploadChatFileRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UploadChatFile(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Web.Proto.Media.UploadChatFileReply UploadChatFile(global::Web.Proto.Media.UploadChatFileRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UploadChatFile, null, options, request);
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Web.Proto.Media.UploadChatFileReply> UploadChatFileAsync(global::Web.Proto.Media.UploadChatFileRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UploadChatFileAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Web.Proto.Media.UploadChatFileReply> UploadChatFileAsync(global::Web.Proto.Media.UploadChatFileRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UploadChatFile, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]

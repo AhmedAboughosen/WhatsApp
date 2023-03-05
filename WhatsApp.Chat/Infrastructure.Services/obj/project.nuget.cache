@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "v7Ko9g1HFR3qvIl0q6i/Zf8nzA0uQlTV9gcZp8Gp0kCa2ohFGyD2o9CmCrtvFCcxlhXeHncuR/bZbqauzjYEgA==",
+  "dgSpecHash": "tD618QJCFowGY1j2wDQXsnL7k7MefZsaX4IC26FLj9j7gUWpKOnbzZ9vYw6h26wUAK8+g5delnUYcRIigafqPw==",
   "success": true,
   "projectFilePath": "D:\\PersonalProjects\\backend\\WhatsApp\\WhatsApp.Chat\\Infrastructure.Services\\Infrastructure.Services.csproj",
   "expectedPackageFiles": [
@@ -29,8 +29,7 @@
     "C:\\Users\\a.hassan\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\7.0.2\\microsoft.entityframeworkcore.analyzers.7.0.2.nupkg.sha512",
     "C:\\Users\\a.hassan\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\7.0.0\\microsoft.extensions.caching.abstractions.7.0.0.nupkg.sha512",
     "C:\\Users\\a.hassan\\.nuget\\packages\\microsoft.extensions.caching.memory\\7.0.0\\microsoft.extensions.caching.memory.7.0.0.nupkg.sha512",
-    "C:\\Users\\a.hassan\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\6.0.2-mauipre.1.22102.15\\microsoft.extensions.configuration.abstractions.6.0.2-mauipre.1.22102.15.nupkg.sha512",
-    "C:\\Users\\a.hassan\\.nuget\\packages\\microsoft.extensions.configuration.binder\\6.0.2-mauipre.1.22102.15\\microsoft.extensions.configuration.binder.6.0.2-mauipre.1.22102.15.nupkg.sha512",
+    "C:\\Users\\a.hassan\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\2.2.0\\microsoft.extensions.configuration.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\a.hassan\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\7.0.0\\microsoft.extensions.dependencyinjection.7.0.0.nupkg.sha512",
     "C:\\Users\\a.hassan\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\7.0.0\\microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512",
     "C:\\Users\\a.hassan\\.nuget\\packages\\microsoft.extensions.fileproviders.abstractions\\2.2.0\\microsoft.extensions.fileproviders.abstractions.2.2.0.nupkg.sha512",
@@ -40,7 +39,6 @@
     "C:\\Users\\a.hassan\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\7.0.0\\microsoft.extensions.logging.abstractions.7.0.0.nupkg.sha512",
     "C:\\Users\\a.hassan\\.nuget\\packages\\microsoft.extensions.objectpool\\2.2.0\\microsoft.extensions.objectpool.2.2.0.nupkg.sha512",
     "C:\\Users\\a.hassan\\.nuget\\packages\\microsoft.extensions.options\\7.0.0\\microsoft.extensions.options.7.0.0.nupkg.sha512",
-    "C:\\Users\\a.hassan\\.nuget\\packages\\microsoft.extensions.options.configurationextensions\\6.0.2-mauipre.1.22102.15\\microsoft.extensions.options.configurationextensions.6.0.2-mauipre.1.22102.15.nupkg.sha512",
     "C:\\Users\\a.hassan\\.nuget\\packages\\microsoft.extensions.primitives\\7.0.0\\microsoft.extensions.primitives.7.0.0.nupkg.sha512",
     "C:\\Users\\a.hassan\\.nuget\\packages\\microsoft.extensions.webencoders\\2.2.0\\microsoft.extensions.webencoders.2.2.0.nupkg.sha512",
     "C:\\Users\\a.hassan\\.nuget\\packages\\microsoft.net.http.headers\\2.2.0\\microsoft.net.http.headers.2.2.0.nupkg.sha512",

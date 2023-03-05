@@ -7,14 +7,45 @@
   "targets": {
     ".NETCoreApp,Version=v6.0": {
       "Core.Application/1.0.0": {
+        "dependencies": {
+          "Core.Domain": "1.0.0"
+        },
         "runtime": {
           "Core.Application.dll": {}
+        }
+      },
+      "MediatR.Contracts/2.0.0": {
+        "runtime": {
+          "lib/netstandard2.0/MediatR.Contracts.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.0.0.0"
+          }
+        }
+      },
+      "Core.Domain/1.0.0": {
+        "dependencies": {
+          "MediatR.Contracts": "2.0.0"
+        },
+        "runtime": {
+          "Core.Domain.dll": {}
         }
       }
     }
   },
   "libraries": {
     "Core.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "MediatR.Contracts/2.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-DKkwHP3xb2BVeBQQedNvg7eMKvQU33H3SozHsc+drjDSCcnVb/ov4tSwdRAyLv74Nb0IUl2evVR9OQuqurGqpA==",
+      "path": "mediatr.contracts/2.0.0",
+      "hashPath": "mediatr.contracts.2.0.0.nupkg.sha512"
+    },
+    "Core.Domain/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

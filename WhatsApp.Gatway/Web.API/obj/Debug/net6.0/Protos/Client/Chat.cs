@@ -9,7 +9,7 @@ using pb = global::Google.Protobuf;
 using pbc = global::Google.Protobuf.Collections;
 using pbr = global::Google.Protobuf.Reflection;
 using scg = global::System.Collections.Generic;
-namespace WhatsApp.Gateway.Proto.Client.Chat {
+namespace WhatsApp.Gateway.Protos.Chat {
 
   /// <summary>Holder for reflection information generated from Protos/Client/chat.proto</summary>
   public static partial class ChatReflection {
@@ -27,37 +27,80 @@ namespace WhatsApp.Gateway.Proto.Client.Chat {
             "ChhQcm90b3MvQ2xpZW50L2NoYXQucHJvdG8SDXdoYXRzYXBwLmNoYXQaHmdv",
             "b2dsZS9wcm90b2J1Zi93cmFwcGVycy5wcm90bxobZ29vZ2xlL3Byb3RvYnVm",
             "L2VtcHR5LnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3Rv",
-            "IssCChFOZXdNZXNzYWdlUmVxdWVzdBIUCgxmcm9tX3VzZXJfaWQYASABKAkS",
-            "EgoKdG9fdXNlcl9pZBgCIAEoCRIwCgxtZXNzYWdlX3R5cGUYBSABKA4yGi53",
-            "aGF0c2FwcC5jaGF0Lk1lc3NhZ2VUeXBlEhEKCWZ1bGxfbmFtZRgGIAEoCRIP",
-            "Cgdjb250ZW50GAcgASgJEhEKCW1lZGlhX3VybBgIIAMoCRIrCgdzZW50X2F0",
-            "GAkgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIwCgxkZWxpdmVy",
-            "ZWRfYXQYCiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEisKB3Nl",
-            "ZW5fYXQYCyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEhcKD2No",
-            "YXRfY2hhbm5lbF9pZBgMIAEoCSJLChBVc2VyQ2hhdFJlc3BvbnNlEjcKB2Nv",
-            "bnRlbnQYASADKAsyJi53aGF0c2FwcC5jaGF0LlVzZXJDaGF0Q29udGVudFJl",
-            "c3BvbnNlIrQBChdVc2VyQ2hhdENvbnRlbnRSZXNwb25zZRINCgV0aXRsZRgB",
-            "IAEoCRIrCgdzZW50X2F0GAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVz",
-            "dGFtcBIwCgxkZWxpdmVyZWRfYXQYAyABKAsyGi5nb29nbGUucHJvdG9idWYu",
-            "VGltZXN0YW1wEisKB3NlZW5fYXQYBCABKAsyGi5nb29nbGUucHJvdG9idWYu",
-            "VGltZXN0YW1wIiIKD1VzZXJDaGF0UmVxdWVzdBIPCgd1c2VyX2lkGAEgASgJ",
-            "IiIKD01lc3NhZ2VSZXNwb25zZRIPCgdtZXNzYWdlGAEgASgJKjUKC01lc3Nh",
-            "Z2VUeXBlEgkKBU1lZGlhEAASCAoEVGV4dBABEhEKDU1lZGlhV2l0aFRleHQQ",
-            "AjKDAgoEQ2hhdBJVChFQdXNoTWVzc2FnZVRvVXNlchIgLndoYXRzYXBwLmNo",
-            "YXQuTmV3TWVzc2FnZVJlcXVlc3QaHi53aGF0c2FwcC5jaGF0Lk1lc3NhZ2VS",
-            "ZXNwb25zZRJWChJQdXNoTWVzc2FnZVRvR3JvdXASIC53aGF0c2FwcC5jaGF0",
-            "Lk5ld01lc3NhZ2VSZXF1ZXN0Gh4ud2hhdHNhcHAuY2hhdC5NZXNzYWdlUmVz",
-            "cG9uc2USTAoJVXNlckNoYXRzEh4ud2hhdHNhcHAuY2hhdC5Vc2VyQ2hhdFJl",
-            "cXVlc3QaHy53aGF0c2FwcC5jaGF0LlVzZXJDaGF0UmVzcG9uc2VCJaoCIldo",
-            "YXRzQXBwLkdhdGV3YXkuUHJvdG8uQ2xpZW50LkNoYXRiBnByb3RvMw=="));
+            "IksKEkNyZWF0ZUdyb3VwUmVxdWVzdBISCgpncm91cF9uYW1lGAEgASgJEhIK",
+            "CmNyZWF0ZWRfYnkYAiABKAkSDQoFdXNlcnMYAyADKAkiNwoQSm9pbkdyb3Vw",
+            "UmVxdWVzdBIPCgd1c2VyX2lkGAEgASgJEhIKCmNoYW5uZWxfaWQYAiABKAki",
+            "OAoRTGVhdmVHcm91cFJlcXVlc3QSDwoHdXNlcl9pZBgBIAEoCRISCgpjaGFu",
+            "bmVsX2lkGAIgASgJIlAKEkdldE1lc3NhZ2VzUmVxdWVzdBITCgtwYWdlX251",
+            "bWJlchgBIAEoBRIRCglwYWdlX3NpemUYAiABKAUSEgoKY2hhbm5lbF9pZBgD",
+            "IAEoCSKSAQoTTWVzc2FnZUxpc3RSZXNwb25zZRI+Cg9tZXNzYWdlX2NvbnRl",
+            "bnQYASADKAsyJS53aGF0c2FwcC5jaGF0Lk1lc3NhZ2VDb250ZW50UmVzcG9u",
+            "c2USEwoLcGFnZV9udW1iZXIYAiABKAUSEQoJcGFnZV9zaXplGAMgASgFEhMK",
+            "C3RvdGFsX3BhZ2VzGAQgASgFInYKFk1lc3NhZ2VDb250ZW50UmVzcG9uc2US",
+            "KgoJdXNlcl9pbmZvGAEgASgLMhcud2hhdHNhcHAuY2hhdC5Vc2VySW5mbxIw",
+            "CgxtZXNzYWdlX2luZm8YAiABKAsyGi53aGF0c2FwcC5jaGF0Lk1lc3NhZ2VJ",
+            "bmZvIjQKCFVzZXJJbmZvEhEKCWZ1bGxfbmFtZRgBIAEoCRIVCg1wcm9maWxl",
+            "X2ltYWdlGAIgASgJIoICCgtNZXNzYWdlSW5mbxIwCgxtZXNzYWdlX3R5cGUY",
+            "BSABKA4yGi53aGF0c2FwcC5jaGF0Lk1lc3NhZ2VUeXBlEhEKCWZ1bGxfbmFt",
+            "ZRgGIAEoCRIPCgdjb250ZW50GAcgASgJEhEKCW1lZGlhX3VybBgIIAMoCRIr",
+            "CgdzZW50X2F0GAkgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIw",
+            "CgxkZWxpdmVyZWRfYXQYCiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0",
+            "YW1wEisKB3NlZW5fYXQYCyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0",
+            "YW1wIssCChFOZXdNZXNzYWdlUmVxdWVzdBIUCgxmcm9tX3VzZXJfaWQYASAB",
+            "KAkSEgoKdG9fdXNlcl9pZBgCIAEoCRIwCgxtZXNzYWdlX3R5cGUYBSABKA4y",
+            "Gi53aGF0c2FwcC5jaGF0Lk1lc3NhZ2VUeXBlEhEKCWZ1bGxfbmFtZRgGIAEo",
+            "CRIPCgdjb250ZW50GAcgASgJEhEKCW1lZGlhX3VybBgIIAMoCRIrCgdzZW50",
+            "X2F0GAkgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIwCgxkZWxp",
+            "dmVyZWRfYXQYCiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEisK",
+            "B3NlZW5fYXQYCyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEhcK",
+            "D2NoYXRfY2hhbm5lbF9pZBgMIAEoCSLQAgoWTmV3R3JvdXBNZXNzYWdlUmVx",
+            "dWVzdBIUCgxmcm9tX3VzZXJfaWQYASABKAkSEgoKdG9fdXNlcl9pZBgCIAEo",
+            "CRIwCgxtZXNzYWdlX3R5cGUYBSABKA4yGi53aGF0c2FwcC5jaGF0Lk1lc3Nh",
+            "Z2VUeXBlEhEKCWZ1bGxfbmFtZRgGIAEoCRIPCgdjb250ZW50GAcgASgJEhEK",
+            "CW1lZGlhX3VybBgIIAMoCRIrCgdzZW50X2F0GAkgASgLMhouZ29vZ2xlLnBy",
+            "b3RvYnVmLlRpbWVzdGFtcBIwCgxkZWxpdmVyZWRfYXQYCiABKAsyGi5nb29n",
+            "bGUucHJvdG9idWYuVGltZXN0YW1wEisKB3NlZW5fYXQYCyABKAsyGi5nb29n",
+            "bGUucHJvdG9idWYuVGltZXN0YW1wEhcKD2NoYXRfY2hhbm5lbF9pZBgMIAEo",
+            "CSJLChBVc2VyQ2hhdFJlc3BvbnNlEjcKB2NvbnRlbnQYASADKAsyJi53aGF0",
+            "c2FwcC5jaGF0LlVzZXJDaGF0Q29udGVudFJlc3BvbnNlIrQBChdVc2VyQ2hh",
+            "dENvbnRlbnRSZXNwb25zZRINCgV0aXRsZRgBIAEoCRIrCgdzZW50X2F0GAIg",
+            "ASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIwCgxkZWxpdmVyZWRf",
+            "YXQYAyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEisKB3NlZW5f",
+            "YXQYBCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wIiIKD1VzZXJD",
+            "aGF0UmVxdWVzdBIPCgd1c2VyX2lkGAEgASgJIiIKD01lc3NhZ2VSZXNwb25z",
+            "ZRIPCgdtZXNzYWdlGAEgASgJKjUKC01lc3NhZ2VUeXBlEgkKBU1lZGlhEAAS",
+            "CAoEVGV4dBABEhEKDU1lZGlhV2l0aFRleHQQAjLOBAoEQ2hhdBJVChFQdXNo",
+            "TWVzc2FnZVRvVXNlchIgLndoYXRzYXBwLmNoYXQuTmV3TWVzc2FnZVJlcXVl",
+            "c3QaHi53aGF0c2FwcC5jaGF0Lk1lc3NhZ2VSZXNwb25zZRJbChJQdXNoTWVz",
+            "c2FnZVRvR3JvdXASJS53aGF0c2FwcC5jaGF0Lk5ld0dyb3VwTWVzc2FnZVJl",
+            "cXVlc3QaHi53aGF0c2FwcC5jaGF0Lk1lc3NhZ2VSZXNwb25zZRJQCgtDcmVh",
+            "dGVHcm91cBIhLndoYXRzYXBwLmNoYXQuQ3JlYXRlR3JvdXBSZXF1ZXN0Gh4u",
+            "d2hhdHNhcHAuY2hhdC5NZXNzYWdlUmVzcG9uc2USTAoJSm9pbkdyb3VwEh8u",
+            "d2hhdHNhcHAuY2hhdC5Kb2luR3JvdXBSZXF1ZXN0Gh4ud2hhdHNhcHAuY2hh",
+            "dC5NZXNzYWdlUmVzcG9uc2USTgoKTGVhdmVHcm91cBIgLndoYXRzYXBwLmNo",
+            "YXQuTGVhdmVHcm91cFJlcXVlc3QaHi53aGF0c2FwcC5jaGF0Lk1lc3NhZ2VS",
+            "ZXNwb25zZRJMCglVc2VyQ2hhdHMSHi53aGF0c2FwcC5jaGF0LlVzZXJDaGF0",
+            "UmVxdWVzdBofLndoYXRzYXBwLmNoYXQuVXNlckNoYXRSZXNwb25zZRJUCgtH",
+            "ZXRNZXNzYWdlcxIhLndoYXRzYXBwLmNoYXQuR2V0TWVzc2FnZXNSZXF1ZXN0",
+            "GiIud2hhdHNhcHAuY2hhdC5NZXNzYWdlTGlzdFJlc3BvbnNlQh+qAhxXaGF0",
+            "c0FwcC5HYXRld2F5LlByb3Rvcy5DaGF0YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::WhatsApp.Gateway.Proto.Client.Chat.MessageType), }, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::WhatsApp.Gateway.Proto.Client.Chat.NewMessageRequest), global::WhatsApp.Gateway.Proto.Client.Chat.NewMessageRequest.Parser, new[]{ "FromUserId", "ToUserId", "MessageType", "FullName", "Content", "MediaUrl", "SentAt", "DeliveredAt", "SeenAt", "ChatChannelId" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::WhatsApp.Gateway.Proto.Client.Chat.UserChatResponse), global::WhatsApp.Gateway.Proto.Client.Chat.UserChatResponse.Parser, new[]{ "Content" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::WhatsApp.Gateway.Proto.Client.Chat.UserChatContentResponse), global::WhatsApp.Gateway.Proto.Client.Chat.UserChatContentResponse.Parser, new[]{ "Title", "SentAt", "DeliveredAt", "SeenAt" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::WhatsApp.Gateway.Proto.Client.Chat.UserChatRequest), global::WhatsApp.Gateway.Proto.Client.Chat.UserChatRequest.Parser, new[]{ "UserId" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::WhatsApp.Gateway.Proto.Client.Chat.MessageResponse), global::WhatsApp.Gateway.Proto.Client.Chat.MessageResponse.Parser, new[]{ "Message" }, null, null, null, null)
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::WhatsApp.Gateway.Protos.Chat.MessageType), }, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::WhatsApp.Gateway.Protos.Chat.CreateGroupRequest), global::WhatsApp.Gateway.Protos.Chat.CreateGroupRequest.Parser, new[]{ "GroupName", "CreatedBy", "Users" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::WhatsApp.Gateway.Protos.Chat.JoinGroupRequest), global::WhatsApp.Gateway.Protos.Chat.JoinGroupRequest.Parser, new[]{ "UserId", "ChannelId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::WhatsApp.Gateway.Protos.Chat.LeaveGroupRequest), global::WhatsApp.Gateway.Protos.Chat.LeaveGroupRequest.Parser, new[]{ "UserId", "ChannelId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::WhatsApp.Gateway.Protos.Chat.GetMessagesRequest), global::WhatsApp.Gateway.Protos.Chat.GetMessagesRequest.Parser, new[]{ "PageNumber", "PageSize", "ChannelId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::WhatsApp.Gateway.Protos.Chat.MessageListResponse), global::WhatsApp.Gateway.Protos.Chat.MessageListResponse.Parser, new[]{ "MessageContent", "PageNumber", "PageSize", "TotalPages" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::WhatsApp.Gateway.Protos.Chat.MessageContentResponse), global::WhatsApp.Gateway.Protos.Chat.MessageContentResponse.Parser, new[]{ "UserInfo", "MessageInfo" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::WhatsApp.Gateway.Protos.Chat.UserInfo), global::WhatsApp.Gateway.Protos.Chat.UserInfo.Parser, new[]{ "FullName", "ProfileImage" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::WhatsApp.Gateway.Protos.Chat.MessageInfo), global::WhatsApp.Gateway.Protos.Chat.MessageInfo.Parser, new[]{ "MessageType", "FullName", "Content", "MediaUrl", "SentAt", "DeliveredAt", "SeenAt" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::WhatsApp.Gateway.Protos.Chat.NewMessageRequest), global::WhatsApp.Gateway.Protos.Chat.NewMessageRequest.Parser, new[]{ "FromUserId", "ToUserId", "MessageType", "FullName", "Content", "MediaUrl", "SentAt", "DeliveredAt", "SeenAt", "ChatChannelId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::WhatsApp.Gateway.Protos.Chat.NewGroupMessageRequest), global::WhatsApp.Gateway.Protos.Chat.NewGroupMessageRequest.Parser, new[]{ "FromUserId", "ToUserId", "MessageType", "FullName", "Content", "MediaUrl", "SentAt", "DeliveredAt", "SeenAt", "ChatChannelId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::WhatsApp.Gateway.Protos.Chat.UserChatResponse), global::WhatsApp.Gateway.Protos.Chat.UserChatResponse.Parser, new[]{ "Content" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::WhatsApp.Gateway.Protos.Chat.UserChatContentResponse), global::WhatsApp.Gateway.Protos.Chat.UserChatContentResponse.Parser, new[]{ "Title", "SentAt", "DeliveredAt", "SeenAt" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::WhatsApp.Gateway.Protos.Chat.UserChatRequest), global::WhatsApp.Gateway.Protos.Chat.UserChatRequest.Parser, new[]{ "UserId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::WhatsApp.Gateway.Protos.Chat.MessageResponse), global::WhatsApp.Gateway.Protos.Chat.MessageResponse.Parser, new[]{ "Message" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,6 +116,2159 @@ namespace WhatsApp.Gateway.Proto.Client.Chat {
   #endregion
 
   #region Messages
+  public sealed partial class CreateGroupRequest : pb::IMessage<CreateGroupRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<CreateGroupRequest> _parser = new pb::MessageParser<CreateGroupRequest>(() => new CreateGroupRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<CreateGroupRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::WhatsApp.Gateway.Protos.Chat.ChatReflection.Descriptor.MessageTypes[0]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CreateGroupRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CreateGroupRequest(CreateGroupRequest other) : this() {
+      groupName_ = other.groupName_;
+      createdBy_ = other.createdBy_;
+      users_ = other.users_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CreateGroupRequest Clone() {
+      return new CreateGroupRequest(this);
+    }
+
+    /// <summary>Field number for the "group_name" field.</summary>
+    public const int GroupNameFieldNumber = 1;
+    private string groupName_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string GroupName {
+      get { return groupName_; }
+      set {
+        groupName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "created_by" field.</summary>
+    public const int CreatedByFieldNumber = 2;
+    private string createdBy_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string CreatedBy {
+      get { return createdBy_; }
+      set {
+        createdBy_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "users" field.</summary>
+    public const int UsersFieldNumber = 3;
+    private static readonly pb::FieldCodec<string> _repeated_users_codec
+        = pb::FieldCodec.ForString(26);
+    private readonly pbc::RepeatedField<string> users_ = new pbc::RepeatedField<string>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> Users {
+      get { return users_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as CreateGroupRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(CreateGroupRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (GroupName != other.GroupName) return false;
+      if (CreatedBy != other.CreatedBy) return false;
+      if(!users_.Equals(other.users_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (GroupName.Length != 0) hash ^= GroupName.GetHashCode();
+      if (CreatedBy.Length != 0) hash ^= CreatedBy.GetHashCode();
+      hash ^= users_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (GroupName.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(GroupName);
+      }
+      if (CreatedBy.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(CreatedBy);
+      }
+      users_.WriteTo(output, _repeated_users_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (GroupName.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(GroupName);
+      }
+      if (CreatedBy.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(CreatedBy);
+      }
+      users_.WriteTo(ref output, _repeated_users_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (GroupName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(GroupName);
+      }
+      if (CreatedBy.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(CreatedBy);
+      }
+      size += users_.CalculateSize(_repeated_users_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(CreateGroupRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.GroupName.Length != 0) {
+        GroupName = other.GroupName;
+      }
+      if (other.CreatedBy.Length != 0) {
+        CreatedBy = other.CreatedBy;
+      }
+      users_.Add(other.users_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            GroupName = input.ReadString();
+            break;
+          }
+          case 18: {
+            CreatedBy = input.ReadString();
+            break;
+          }
+          case 26: {
+            users_.AddEntriesFrom(input, _repeated_users_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            GroupName = input.ReadString();
+            break;
+          }
+          case 18: {
+            CreatedBy = input.ReadString();
+            break;
+          }
+          case 26: {
+            users_.AddEntriesFrom(ref input, _repeated_users_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  public sealed partial class JoinGroupRequest : pb::IMessage<JoinGroupRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<JoinGroupRequest> _parser = new pb::MessageParser<JoinGroupRequest>(() => new JoinGroupRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<JoinGroupRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::WhatsApp.Gateway.Protos.Chat.ChatReflection.Descriptor.MessageTypes[1]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public JoinGroupRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public JoinGroupRequest(JoinGroupRequest other) : this() {
+      userId_ = other.userId_;
+      channelId_ = other.channelId_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public JoinGroupRequest Clone() {
+      return new JoinGroupRequest(this);
+    }
+
+    /// <summary>Field number for the "user_id" field.</summary>
+    public const int UserIdFieldNumber = 1;
+    private string userId_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string UserId {
+      get { return userId_; }
+      set {
+        userId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "channel_id" field.</summary>
+    public const int ChannelIdFieldNumber = 2;
+    private string channelId_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ChannelId {
+      get { return channelId_; }
+      set {
+        channelId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as JoinGroupRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(JoinGroupRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (UserId != other.UserId) return false;
+      if (ChannelId != other.ChannelId) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (UserId.Length != 0) hash ^= UserId.GetHashCode();
+      if (ChannelId.Length != 0) hash ^= ChannelId.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (UserId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(UserId);
+      }
+      if (ChannelId.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(ChannelId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (UserId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(UserId);
+      }
+      if (ChannelId.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(ChannelId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (UserId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(UserId);
+      }
+      if (ChannelId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ChannelId);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(JoinGroupRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.UserId.Length != 0) {
+        UserId = other.UserId;
+      }
+      if (other.ChannelId.Length != 0) {
+        ChannelId = other.ChannelId;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            UserId = input.ReadString();
+            break;
+          }
+          case 18: {
+            ChannelId = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            UserId = input.ReadString();
+            break;
+          }
+          case 18: {
+            ChannelId = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  public sealed partial class LeaveGroupRequest : pb::IMessage<LeaveGroupRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<LeaveGroupRequest> _parser = new pb::MessageParser<LeaveGroupRequest>(() => new LeaveGroupRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<LeaveGroupRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::WhatsApp.Gateway.Protos.Chat.ChatReflection.Descriptor.MessageTypes[2]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public LeaveGroupRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public LeaveGroupRequest(LeaveGroupRequest other) : this() {
+      userId_ = other.userId_;
+      channelId_ = other.channelId_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public LeaveGroupRequest Clone() {
+      return new LeaveGroupRequest(this);
+    }
+
+    /// <summary>Field number for the "user_id" field.</summary>
+    public const int UserIdFieldNumber = 1;
+    private string userId_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string UserId {
+      get { return userId_; }
+      set {
+        userId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "channel_id" field.</summary>
+    public const int ChannelIdFieldNumber = 2;
+    private string channelId_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ChannelId {
+      get { return channelId_; }
+      set {
+        channelId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as LeaveGroupRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(LeaveGroupRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (UserId != other.UserId) return false;
+      if (ChannelId != other.ChannelId) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (UserId.Length != 0) hash ^= UserId.GetHashCode();
+      if (ChannelId.Length != 0) hash ^= ChannelId.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (UserId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(UserId);
+      }
+      if (ChannelId.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(ChannelId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (UserId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(UserId);
+      }
+      if (ChannelId.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(ChannelId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (UserId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(UserId);
+      }
+      if (ChannelId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ChannelId);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(LeaveGroupRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.UserId.Length != 0) {
+        UserId = other.UserId;
+      }
+      if (other.ChannelId.Length != 0) {
+        ChannelId = other.ChannelId;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            UserId = input.ReadString();
+            break;
+          }
+          case 18: {
+            ChannelId = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            UserId = input.ReadString();
+            break;
+          }
+          case 18: {
+            ChannelId = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  public sealed partial class GetMessagesRequest : pb::IMessage<GetMessagesRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<GetMessagesRequest> _parser = new pb::MessageParser<GetMessagesRequest>(() => new GetMessagesRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<GetMessagesRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::WhatsApp.Gateway.Protos.Chat.ChatReflection.Descriptor.MessageTypes[3]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GetMessagesRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GetMessagesRequest(GetMessagesRequest other) : this() {
+      pageNumber_ = other.pageNumber_;
+      pageSize_ = other.pageSize_;
+      channelId_ = other.channelId_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GetMessagesRequest Clone() {
+      return new GetMessagesRequest(this);
+    }
+
+    /// <summary>Field number for the "page_number" field.</summary>
+    public const int PageNumberFieldNumber = 1;
+    private int pageNumber_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int PageNumber {
+      get { return pageNumber_; }
+      set {
+        pageNumber_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "page_size" field.</summary>
+    public const int PageSizeFieldNumber = 2;
+    private int pageSize_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int PageSize {
+      get { return pageSize_; }
+      set {
+        pageSize_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "channel_id" field.</summary>
+    public const int ChannelIdFieldNumber = 3;
+    private string channelId_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ChannelId {
+      get { return channelId_; }
+      set {
+        channelId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as GetMessagesRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(GetMessagesRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (PageNumber != other.PageNumber) return false;
+      if (PageSize != other.PageSize) return false;
+      if (ChannelId != other.ChannelId) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (PageNumber != 0) hash ^= PageNumber.GetHashCode();
+      if (PageSize != 0) hash ^= PageSize.GetHashCode();
+      if (ChannelId.Length != 0) hash ^= ChannelId.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (PageNumber != 0) {
+        output.WriteRawTag(8);
+        output.WriteInt32(PageNumber);
+      }
+      if (PageSize != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(PageSize);
+      }
+      if (ChannelId.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(ChannelId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (PageNumber != 0) {
+        output.WriteRawTag(8);
+        output.WriteInt32(PageNumber);
+      }
+      if (PageSize != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(PageSize);
+      }
+      if (ChannelId.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(ChannelId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (PageNumber != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(PageNumber);
+      }
+      if (PageSize != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(PageSize);
+      }
+      if (ChannelId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ChannelId);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(GetMessagesRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.PageNumber != 0) {
+        PageNumber = other.PageNumber;
+      }
+      if (other.PageSize != 0) {
+        PageSize = other.PageSize;
+      }
+      if (other.ChannelId.Length != 0) {
+        ChannelId = other.ChannelId;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            PageNumber = input.ReadInt32();
+            break;
+          }
+          case 16: {
+            PageSize = input.ReadInt32();
+            break;
+          }
+          case 26: {
+            ChannelId = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            PageNumber = input.ReadInt32();
+            break;
+          }
+          case 16: {
+            PageSize = input.ReadInt32();
+            break;
+          }
+          case 26: {
+            ChannelId = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  public sealed partial class MessageListResponse : pb::IMessage<MessageListResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<MessageListResponse> _parser = new pb::MessageParser<MessageListResponse>(() => new MessageListResponse());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<MessageListResponse> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::WhatsApp.Gateway.Protos.Chat.ChatReflection.Descriptor.MessageTypes[4]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public MessageListResponse() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public MessageListResponse(MessageListResponse other) : this() {
+      messageContent_ = other.messageContent_.Clone();
+      pageNumber_ = other.pageNumber_;
+      pageSize_ = other.pageSize_;
+      totalPages_ = other.totalPages_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public MessageListResponse Clone() {
+      return new MessageListResponse(this);
+    }
+
+    /// <summary>Field number for the "message_content" field.</summary>
+    public const int MessageContentFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::WhatsApp.Gateway.Protos.Chat.MessageContentResponse> _repeated_messageContent_codec
+        = pb::FieldCodec.ForMessage(10, global::WhatsApp.Gateway.Protos.Chat.MessageContentResponse.Parser);
+    private readonly pbc::RepeatedField<global::WhatsApp.Gateway.Protos.Chat.MessageContentResponse> messageContent_ = new pbc::RepeatedField<global::WhatsApp.Gateway.Protos.Chat.MessageContentResponse>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::WhatsApp.Gateway.Protos.Chat.MessageContentResponse> MessageContent {
+      get { return messageContent_; }
+    }
+
+    /// <summary>Field number for the "page_number" field.</summary>
+    public const int PageNumberFieldNumber = 2;
+    private int pageNumber_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int PageNumber {
+      get { return pageNumber_; }
+      set {
+        pageNumber_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "page_size" field.</summary>
+    public const int PageSizeFieldNumber = 3;
+    private int pageSize_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int PageSize {
+      get { return pageSize_; }
+      set {
+        pageSize_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "total_pages" field.</summary>
+    public const int TotalPagesFieldNumber = 4;
+    private int totalPages_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int TotalPages {
+      get { return totalPages_; }
+      set {
+        totalPages_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as MessageListResponse);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(MessageListResponse other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!messageContent_.Equals(other.messageContent_)) return false;
+      if (PageNumber != other.PageNumber) return false;
+      if (PageSize != other.PageSize) return false;
+      if (TotalPages != other.TotalPages) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= messageContent_.GetHashCode();
+      if (PageNumber != 0) hash ^= PageNumber.GetHashCode();
+      if (PageSize != 0) hash ^= PageSize.GetHashCode();
+      if (TotalPages != 0) hash ^= TotalPages.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      messageContent_.WriteTo(output, _repeated_messageContent_codec);
+      if (PageNumber != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(PageNumber);
+      }
+      if (PageSize != 0) {
+        output.WriteRawTag(24);
+        output.WriteInt32(PageSize);
+      }
+      if (TotalPages != 0) {
+        output.WriteRawTag(32);
+        output.WriteInt32(TotalPages);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      messageContent_.WriteTo(ref output, _repeated_messageContent_codec);
+      if (PageNumber != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(PageNumber);
+      }
+      if (PageSize != 0) {
+        output.WriteRawTag(24);
+        output.WriteInt32(PageSize);
+      }
+      if (TotalPages != 0) {
+        output.WriteRawTag(32);
+        output.WriteInt32(TotalPages);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      size += messageContent_.CalculateSize(_repeated_messageContent_codec);
+      if (PageNumber != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(PageNumber);
+      }
+      if (PageSize != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(PageSize);
+      }
+      if (TotalPages != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(TotalPages);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(MessageListResponse other) {
+      if (other == null) {
+        return;
+      }
+      messageContent_.Add(other.messageContent_);
+      if (other.PageNumber != 0) {
+        PageNumber = other.PageNumber;
+      }
+      if (other.PageSize != 0) {
+        PageSize = other.PageSize;
+      }
+      if (other.TotalPages != 0) {
+        TotalPages = other.TotalPages;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            messageContent_.AddEntriesFrom(input, _repeated_messageContent_codec);
+            break;
+          }
+          case 16: {
+            PageNumber = input.ReadInt32();
+            break;
+          }
+          case 24: {
+            PageSize = input.ReadInt32();
+            break;
+          }
+          case 32: {
+            TotalPages = input.ReadInt32();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            messageContent_.AddEntriesFrom(ref input, _repeated_messageContent_codec);
+            break;
+          }
+          case 16: {
+            PageNumber = input.ReadInt32();
+            break;
+          }
+          case 24: {
+            PageSize = input.ReadInt32();
+            break;
+          }
+          case 32: {
+            TotalPages = input.ReadInt32();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  public sealed partial class MessageContentResponse : pb::IMessage<MessageContentResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<MessageContentResponse> _parser = new pb::MessageParser<MessageContentResponse>(() => new MessageContentResponse());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<MessageContentResponse> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::WhatsApp.Gateway.Protos.Chat.ChatReflection.Descriptor.MessageTypes[5]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public MessageContentResponse() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public MessageContentResponse(MessageContentResponse other) : this() {
+      userInfo_ = other.userInfo_ != null ? other.userInfo_.Clone() : null;
+      messageInfo_ = other.messageInfo_ != null ? other.messageInfo_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public MessageContentResponse Clone() {
+      return new MessageContentResponse(this);
+    }
+
+    /// <summary>Field number for the "user_info" field.</summary>
+    public const int UserInfoFieldNumber = 1;
+    private global::WhatsApp.Gateway.Protos.Chat.UserInfo userInfo_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::WhatsApp.Gateway.Protos.Chat.UserInfo UserInfo {
+      get { return userInfo_; }
+      set {
+        userInfo_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "message_info" field.</summary>
+    public const int MessageInfoFieldNumber = 2;
+    private global::WhatsApp.Gateway.Protos.Chat.MessageInfo messageInfo_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::WhatsApp.Gateway.Protos.Chat.MessageInfo MessageInfo {
+      get { return messageInfo_; }
+      set {
+        messageInfo_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as MessageContentResponse);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(MessageContentResponse other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(UserInfo, other.UserInfo)) return false;
+      if (!object.Equals(MessageInfo, other.MessageInfo)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (userInfo_ != null) hash ^= UserInfo.GetHashCode();
+      if (messageInfo_ != null) hash ^= MessageInfo.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (userInfo_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(UserInfo);
+      }
+      if (messageInfo_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(MessageInfo);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (userInfo_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(UserInfo);
+      }
+      if (messageInfo_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(MessageInfo);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (userInfo_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(UserInfo);
+      }
+      if (messageInfo_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(MessageInfo);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(MessageContentResponse other) {
+      if (other == null) {
+        return;
+      }
+      if (other.userInfo_ != null) {
+        if (userInfo_ == null) {
+          UserInfo = new global::WhatsApp.Gateway.Protos.Chat.UserInfo();
+        }
+        UserInfo.MergeFrom(other.UserInfo);
+      }
+      if (other.messageInfo_ != null) {
+        if (messageInfo_ == null) {
+          MessageInfo = new global::WhatsApp.Gateway.Protos.Chat.MessageInfo();
+        }
+        MessageInfo.MergeFrom(other.MessageInfo);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (userInfo_ == null) {
+              UserInfo = new global::WhatsApp.Gateway.Protos.Chat.UserInfo();
+            }
+            input.ReadMessage(UserInfo);
+            break;
+          }
+          case 18: {
+            if (messageInfo_ == null) {
+              MessageInfo = new global::WhatsApp.Gateway.Protos.Chat.MessageInfo();
+            }
+            input.ReadMessage(MessageInfo);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (userInfo_ == null) {
+              UserInfo = new global::WhatsApp.Gateway.Protos.Chat.UserInfo();
+            }
+            input.ReadMessage(UserInfo);
+            break;
+          }
+          case 18: {
+            if (messageInfo_ == null) {
+              MessageInfo = new global::WhatsApp.Gateway.Protos.Chat.MessageInfo();
+            }
+            input.ReadMessage(MessageInfo);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  public sealed partial class UserInfo : pb::IMessage<UserInfo>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<UserInfo> _parser = new pb::MessageParser<UserInfo>(() => new UserInfo());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<UserInfo> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::WhatsApp.Gateway.Protos.Chat.ChatReflection.Descriptor.MessageTypes[6]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public UserInfo() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public UserInfo(UserInfo other) : this() {
+      fullName_ = other.fullName_;
+      profileImage_ = other.profileImage_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public UserInfo Clone() {
+      return new UserInfo(this);
+    }
+
+    /// <summary>Field number for the "full_name" field.</summary>
+    public const int FullNameFieldNumber = 1;
+    private string fullName_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string FullName {
+      get { return fullName_; }
+      set {
+        fullName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "profile_image" field.</summary>
+    public const int ProfileImageFieldNumber = 2;
+    private string profileImage_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ProfileImage {
+      get { return profileImage_; }
+      set {
+        profileImage_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as UserInfo);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(UserInfo other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (FullName != other.FullName) return false;
+      if (ProfileImage != other.ProfileImage) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (FullName.Length != 0) hash ^= FullName.GetHashCode();
+      if (ProfileImage.Length != 0) hash ^= ProfileImage.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (FullName.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(FullName);
+      }
+      if (ProfileImage.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(ProfileImage);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (FullName.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(FullName);
+      }
+      if (ProfileImage.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(ProfileImage);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (FullName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(FullName);
+      }
+      if (ProfileImage.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ProfileImage);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(UserInfo other) {
+      if (other == null) {
+        return;
+      }
+      if (other.FullName.Length != 0) {
+        FullName = other.FullName;
+      }
+      if (other.ProfileImage.Length != 0) {
+        ProfileImage = other.ProfileImage;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            FullName = input.ReadString();
+            break;
+          }
+          case 18: {
+            ProfileImage = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            FullName = input.ReadString();
+            break;
+          }
+          case 18: {
+            ProfileImage = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  public sealed partial class MessageInfo : pb::IMessage<MessageInfo>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<MessageInfo> _parser = new pb::MessageParser<MessageInfo>(() => new MessageInfo());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<MessageInfo> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::WhatsApp.Gateway.Protos.Chat.ChatReflection.Descriptor.MessageTypes[7]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public MessageInfo() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public MessageInfo(MessageInfo other) : this() {
+      messageType_ = other.messageType_;
+      fullName_ = other.fullName_;
+      content_ = other.content_;
+      mediaUrl_ = other.mediaUrl_.Clone();
+      sentAt_ = other.sentAt_ != null ? other.sentAt_.Clone() : null;
+      deliveredAt_ = other.deliveredAt_ != null ? other.deliveredAt_.Clone() : null;
+      seenAt_ = other.seenAt_ != null ? other.seenAt_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public MessageInfo Clone() {
+      return new MessageInfo(this);
+    }
+
+    /// <summary>Field number for the "message_type" field.</summary>
+    public const int MessageTypeFieldNumber = 5;
+    private global::WhatsApp.Gateway.Protos.Chat.MessageType messageType_ = global::WhatsApp.Gateway.Protos.Chat.MessageType.Media;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::WhatsApp.Gateway.Protos.Chat.MessageType MessageType {
+      get { return messageType_; }
+      set {
+        messageType_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "full_name" field.</summary>
+    public const int FullNameFieldNumber = 6;
+    private string fullName_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string FullName {
+      get { return fullName_; }
+      set {
+        fullName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "content" field.</summary>
+    public const int ContentFieldNumber = 7;
+    private string content_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Content {
+      get { return content_; }
+      set {
+        content_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "media_url" field.</summary>
+    public const int MediaUrlFieldNumber = 8;
+    private static readonly pb::FieldCodec<string> _repeated_mediaUrl_codec
+        = pb::FieldCodec.ForString(66);
+    private readonly pbc::RepeatedField<string> mediaUrl_ = new pbc::RepeatedField<string>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> MediaUrl {
+      get { return mediaUrl_; }
+    }
+
+    /// <summary>Field number for the "sent_at" field.</summary>
+    public const int SentAtFieldNumber = 9;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp sentAt_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp SentAt {
+      get { return sentAt_; }
+      set {
+        sentAt_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "delivered_at" field.</summary>
+    public const int DeliveredAtFieldNumber = 10;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp deliveredAt_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp DeliveredAt {
+      get { return deliveredAt_; }
+      set {
+        deliveredAt_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "seen_at" field.</summary>
+    public const int SeenAtFieldNumber = 11;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp seenAt_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp SeenAt {
+      get { return seenAt_; }
+      set {
+        seenAt_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as MessageInfo);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(MessageInfo other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (MessageType != other.MessageType) return false;
+      if (FullName != other.FullName) return false;
+      if (Content != other.Content) return false;
+      if(!mediaUrl_.Equals(other.mediaUrl_)) return false;
+      if (!object.Equals(SentAt, other.SentAt)) return false;
+      if (!object.Equals(DeliveredAt, other.DeliveredAt)) return false;
+      if (!object.Equals(SeenAt, other.SeenAt)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (MessageType != global::WhatsApp.Gateway.Protos.Chat.MessageType.Media) hash ^= MessageType.GetHashCode();
+      if (FullName.Length != 0) hash ^= FullName.GetHashCode();
+      if (Content.Length != 0) hash ^= Content.GetHashCode();
+      hash ^= mediaUrl_.GetHashCode();
+      if (sentAt_ != null) hash ^= SentAt.GetHashCode();
+      if (deliveredAt_ != null) hash ^= DeliveredAt.GetHashCode();
+      if (seenAt_ != null) hash ^= SeenAt.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (MessageType != global::WhatsApp.Gateway.Protos.Chat.MessageType.Media) {
+        output.WriteRawTag(40);
+        output.WriteEnum((int) MessageType);
+      }
+      if (FullName.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(FullName);
+      }
+      if (Content.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(Content);
+      }
+      mediaUrl_.WriteTo(output, _repeated_mediaUrl_codec);
+      if (sentAt_ != null) {
+        output.WriteRawTag(74);
+        output.WriteMessage(SentAt);
+      }
+      if (deliveredAt_ != null) {
+        output.WriteRawTag(82);
+        output.WriteMessage(DeliveredAt);
+      }
+      if (seenAt_ != null) {
+        output.WriteRawTag(90);
+        output.WriteMessage(SeenAt);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (MessageType != global::WhatsApp.Gateway.Protos.Chat.MessageType.Media) {
+        output.WriteRawTag(40);
+        output.WriteEnum((int) MessageType);
+      }
+      if (FullName.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(FullName);
+      }
+      if (Content.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(Content);
+      }
+      mediaUrl_.WriteTo(ref output, _repeated_mediaUrl_codec);
+      if (sentAt_ != null) {
+        output.WriteRawTag(74);
+        output.WriteMessage(SentAt);
+      }
+      if (deliveredAt_ != null) {
+        output.WriteRawTag(82);
+        output.WriteMessage(DeliveredAt);
+      }
+      if (seenAt_ != null) {
+        output.WriteRawTag(90);
+        output.WriteMessage(SeenAt);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (MessageType != global::WhatsApp.Gateway.Protos.Chat.MessageType.Media) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) MessageType);
+      }
+      if (FullName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(FullName);
+      }
+      if (Content.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Content);
+      }
+      size += mediaUrl_.CalculateSize(_repeated_mediaUrl_codec);
+      if (sentAt_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(SentAt);
+      }
+      if (deliveredAt_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(DeliveredAt);
+      }
+      if (seenAt_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(SeenAt);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(MessageInfo other) {
+      if (other == null) {
+        return;
+      }
+      if (other.MessageType != global::WhatsApp.Gateway.Protos.Chat.MessageType.Media) {
+        MessageType = other.MessageType;
+      }
+      if (other.FullName.Length != 0) {
+        FullName = other.FullName;
+      }
+      if (other.Content.Length != 0) {
+        Content = other.Content;
+      }
+      mediaUrl_.Add(other.mediaUrl_);
+      if (other.sentAt_ != null) {
+        if (sentAt_ == null) {
+          SentAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        SentAt.MergeFrom(other.SentAt);
+      }
+      if (other.deliveredAt_ != null) {
+        if (deliveredAt_ == null) {
+          DeliveredAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        DeliveredAt.MergeFrom(other.DeliveredAt);
+      }
+      if (other.seenAt_ != null) {
+        if (seenAt_ == null) {
+          SeenAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        SeenAt.MergeFrom(other.SeenAt);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 40: {
+            MessageType = (global::WhatsApp.Gateway.Protos.Chat.MessageType) input.ReadEnum();
+            break;
+          }
+          case 50: {
+            FullName = input.ReadString();
+            break;
+          }
+          case 58: {
+            Content = input.ReadString();
+            break;
+          }
+          case 66: {
+            mediaUrl_.AddEntriesFrom(input, _repeated_mediaUrl_codec);
+            break;
+          }
+          case 74: {
+            if (sentAt_ == null) {
+              SentAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(SentAt);
+            break;
+          }
+          case 82: {
+            if (deliveredAt_ == null) {
+              DeliveredAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(DeliveredAt);
+            break;
+          }
+          case 90: {
+            if (seenAt_ == null) {
+              SeenAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(SeenAt);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 40: {
+            MessageType = (global::WhatsApp.Gateway.Protos.Chat.MessageType) input.ReadEnum();
+            break;
+          }
+          case 50: {
+            FullName = input.ReadString();
+            break;
+          }
+          case 58: {
+            Content = input.ReadString();
+            break;
+          }
+          case 66: {
+            mediaUrl_.AddEntriesFrom(ref input, _repeated_mediaUrl_codec);
+            break;
+          }
+          case 74: {
+            if (sentAt_ == null) {
+              SentAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(SentAt);
+            break;
+          }
+          case 82: {
+            if (deliveredAt_ == null) {
+              DeliveredAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(DeliveredAt);
+            break;
+          }
+          case 90: {
+            if (seenAt_ == null) {
+              SeenAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(SeenAt);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
   public sealed partial class NewMessageRequest : pb::IMessage<NewMessageRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -87,7 +2283,7 @@ namespace WhatsApp.Gateway.Proto.Client.Chat {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::WhatsApp.Gateway.Proto.Client.Chat.ChatReflection.Descriptor.MessageTypes[0]; }
+      get { return global::WhatsApp.Gateway.Protos.Chat.ChatReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -152,10 +2348,10 @@ namespace WhatsApp.Gateway.Proto.Client.Chat {
 
     /// <summary>Field number for the "message_type" field.</summary>
     public const int MessageTypeFieldNumber = 5;
-    private global::WhatsApp.Gateway.Proto.Client.Chat.MessageType messageType_ = global::WhatsApp.Gateway.Proto.Client.Chat.MessageType.Media;
+    private global::WhatsApp.Gateway.Protos.Chat.MessageType messageType_ = global::WhatsApp.Gateway.Protos.Chat.MessageType.Media;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::WhatsApp.Gateway.Proto.Client.Chat.MessageType MessageType {
+    public global::WhatsApp.Gateway.Protos.Chat.MessageType MessageType {
       get { return messageType_; }
       set {
         messageType_ = value;
@@ -279,7 +2475,7 @@ namespace WhatsApp.Gateway.Proto.Client.Chat {
       int hash = 1;
       if (FromUserId.Length != 0) hash ^= FromUserId.GetHashCode();
       if (ToUserId.Length != 0) hash ^= ToUserId.GetHashCode();
-      if (MessageType != global::WhatsApp.Gateway.Proto.Client.Chat.MessageType.Media) hash ^= MessageType.GetHashCode();
+      if (MessageType != global::WhatsApp.Gateway.Protos.Chat.MessageType.Media) hash ^= MessageType.GetHashCode();
       if (FullName.Length != 0) hash ^= FullName.GetHashCode();
       if (Content.Length != 0) hash ^= Content.GetHashCode();
       hash ^= mediaUrl_.GetHashCode();
@@ -313,7 +2509,7 @@ namespace WhatsApp.Gateway.Proto.Client.Chat {
         output.WriteRawTag(18);
         output.WriteString(ToUserId);
       }
-      if (MessageType != global::WhatsApp.Gateway.Proto.Client.Chat.MessageType.Media) {
+      if (MessageType != global::WhatsApp.Gateway.Protos.Chat.MessageType.Media) {
         output.WriteRawTag(40);
         output.WriteEnum((int) MessageType);
       }
@@ -360,7 +2556,7 @@ namespace WhatsApp.Gateway.Proto.Client.Chat {
         output.WriteRawTag(18);
         output.WriteString(ToUserId);
       }
-      if (MessageType != global::WhatsApp.Gateway.Proto.Client.Chat.MessageType.Media) {
+      if (MessageType != global::WhatsApp.Gateway.Protos.Chat.MessageType.Media) {
         output.WriteRawTag(40);
         output.WriteEnum((int) MessageType);
       }
@@ -405,7 +2601,7 @@ namespace WhatsApp.Gateway.Proto.Client.Chat {
       if (ToUserId.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(ToUserId);
       }
-      if (MessageType != global::WhatsApp.Gateway.Proto.Client.Chat.MessageType.Media) {
+      if (MessageType != global::WhatsApp.Gateway.Protos.Chat.MessageType.Media) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) MessageType);
       }
       if (FullName.Length != 0) {
@@ -445,7 +2641,7 @@ namespace WhatsApp.Gateway.Proto.Client.Chat {
       if (other.ToUserId.Length != 0) {
         ToUserId = other.ToUserId;
       }
-      if (other.MessageType != global::WhatsApp.Gateway.Proto.Client.Chat.MessageType.Media) {
+      if (other.MessageType != global::WhatsApp.Gateway.Protos.Chat.MessageType.Media) {
         MessageType = other.MessageType;
       }
       if (other.FullName.Length != 0) {
@@ -500,7 +2696,7 @@ namespace WhatsApp.Gateway.Proto.Client.Chat {
             break;
           }
           case 40: {
-            MessageType = (global::WhatsApp.Gateway.Proto.Client.Chat.MessageType) input.ReadEnum();
+            MessageType = (global::WhatsApp.Gateway.Protos.Chat.MessageType) input.ReadEnum();
             break;
           }
           case 50: {
@@ -564,7 +2760,545 @@ namespace WhatsApp.Gateway.Proto.Client.Chat {
             break;
           }
           case 40: {
-            MessageType = (global::WhatsApp.Gateway.Proto.Client.Chat.MessageType) input.ReadEnum();
+            MessageType = (global::WhatsApp.Gateway.Protos.Chat.MessageType) input.ReadEnum();
+            break;
+          }
+          case 50: {
+            FullName = input.ReadString();
+            break;
+          }
+          case 58: {
+            Content = input.ReadString();
+            break;
+          }
+          case 66: {
+            mediaUrl_.AddEntriesFrom(ref input, _repeated_mediaUrl_codec);
+            break;
+          }
+          case 74: {
+            if (sentAt_ == null) {
+              SentAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(SentAt);
+            break;
+          }
+          case 82: {
+            if (deliveredAt_ == null) {
+              DeliveredAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(DeliveredAt);
+            break;
+          }
+          case 90: {
+            if (seenAt_ == null) {
+              SeenAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(SeenAt);
+            break;
+          }
+          case 98: {
+            ChatChannelId = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  public sealed partial class NewGroupMessageRequest : pb::IMessage<NewGroupMessageRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<NewGroupMessageRequest> _parser = new pb::MessageParser<NewGroupMessageRequest>(() => new NewGroupMessageRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<NewGroupMessageRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::WhatsApp.Gateway.Protos.Chat.ChatReflection.Descriptor.MessageTypes[9]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public NewGroupMessageRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public NewGroupMessageRequest(NewGroupMessageRequest other) : this() {
+      fromUserId_ = other.fromUserId_;
+      toUserId_ = other.toUserId_;
+      messageType_ = other.messageType_;
+      fullName_ = other.fullName_;
+      content_ = other.content_;
+      mediaUrl_ = other.mediaUrl_.Clone();
+      sentAt_ = other.sentAt_ != null ? other.sentAt_.Clone() : null;
+      deliveredAt_ = other.deliveredAt_ != null ? other.deliveredAt_.Clone() : null;
+      seenAt_ = other.seenAt_ != null ? other.seenAt_.Clone() : null;
+      chatChannelId_ = other.chatChannelId_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public NewGroupMessageRequest Clone() {
+      return new NewGroupMessageRequest(this);
+    }
+
+    /// <summary>Field number for the "from_user_id" field.</summary>
+    public const int FromUserIdFieldNumber = 1;
+    private string fromUserId_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string FromUserId {
+      get { return fromUserId_; }
+      set {
+        fromUserId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "to_user_id" field.</summary>
+    public const int ToUserIdFieldNumber = 2;
+    private string toUserId_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ToUserId {
+      get { return toUserId_; }
+      set {
+        toUserId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "message_type" field.</summary>
+    public const int MessageTypeFieldNumber = 5;
+    private global::WhatsApp.Gateway.Protos.Chat.MessageType messageType_ = global::WhatsApp.Gateway.Protos.Chat.MessageType.Media;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::WhatsApp.Gateway.Protos.Chat.MessageType MessageType {
+      get { return messageType_; }
+      set {
+        messageType_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "full_name" field.</summary>
+    public const int FullNameFieldNumber = 6;
+    private string fullName_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string FullName {
+      get { return fullName_; }
+      set {
+        fullName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "content" field.</summary>
+    public const int ContentFieldNumber = 7;
+    private string content_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Content {
+      get { return content_; }
+      set {
+        content_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "media_url" field.</summary>
+    public const int MediaUrlFieldNumber = 8;
+    private static readonly pb::FieldCodec<string> _repeated_mediaUrl_codec
+        = pb::FieldCodec.ForString(66);
+    private readonly pbc::RepeatedField<string> mediaUrl_ = new pbc::RepeatedField<string>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> MediaUrl {
+      get { return mediaUrl_; }
+    }
+
+    /// <summary>Field number for the "sent_at" field.</summary>
+    public const int SentAtFieldNumber = 9;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp sentAt_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp SentAt {
+      get { return sentAt_; }
+      set {
+        sentAt_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "delivered_at" field.</summary>
+    public const int DeliveredAtFieldNumber = 10;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp deliveredAt_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp DeliveredAt {
+      get { return deliveredAt_; }
+      set {
+        deliveredAt_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "seen_at" field.</summary>
+    public const int SeenAtFieldNumber = 11;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp seenAt_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp SeenAt {
+      get { return seenAt_; }
+      set {
+        seenAt_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "chat_channel_id" field.</summary>
+    public const int ChatChannelIdFieldNumber = 12;
+    private string chatChannelId_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ChatChannelId {
+      get { return chatChannelId_; }
+      set {
+        chatChannelId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as NewGroupMessageRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(NewGroupMessageRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (FromUserId != other.FromUserId) return false;
+      if (ToUserId != other.ToUserId) return false;
+      if (MessageType != other.MessageType) return false;
+      if (FullName != other.FullName) return false;
+      if (Content != other.Content) return false;
+      if(!mediaUrl_.Equals(other.mediaUrl_)) return false;
+      if (!object.Equals(SentAt, other.SentAt)) return false;
+      if (!object.Equals(DeliveredAt, other.DeliveredAt)) return false;
+      if (!object.Equals(SeenAt, other.SeenAt)) return false;
+      if (ChatChannelId != other.ChatChannelId) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (FromUserId.Length != 0) hash ^= FromUserId.GetHashCode();
+      if (ToUserId.Length != 0) hash ^= ToUserId.GetHashCode();
+      if (MessageType != global::WhatsApp.Gateway.Protos.Chat.MessageType.Media) hash ^= MessageType.GetHashCode();
+      if (FullName.Length != 0) hash ^= FullName.GetHashCode();
+      if (Content.Length != 0) hash ^= Content.GetHashCode();
+      hash ^= mediaUrl_.GetHashCode();
+      if (sentAt_ != null) hash ^= SentAt.GetHashCode();
+      if (deliveredAt_ != null) hash ^= DeliveredAt.GetHashCode();
+      if (seenAt_ != null) hash ^= SeenAt.GetHashCode();
+      if (ChatChannelId.Length != 0) hash ^= ChatChannelId.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (FromUserId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(FromUserId);
+      }
+      if (ToUserId.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(ToUserId);
+      }
+      if (MessageType != global::WhatsApp.Gateway.Protos.Chat.MessageType.Media) {
+        output.WriteRawTag(40);
+        output.WriteEnum((int) MessageType);
+      }
+      if (FullName.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(FullName);
+      }
+      if (Content.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(Content);
+      }
+      mediaUrl_.WriteTo(output, _repeated_mediaUrl_codec);
+      if (sentAt_ != null) {
+        output.WriteRawTag(74);
+        output.WriteMessage(SentAt);
+      }
+      if (deliveredAt_ != null) {
+        output.WriteRawTag(82);
+        output.WriteMessage(DeliveredAt);
+      }
+      if (seenAt_ != null) {
+        output.WriteRawTag(90);
+        output.WriteMessage(SeenAt);
+      }
+      if (ChatChannelId.Length != 0) {
+        output.WriteRawTag(98);
+        output.WriteString(ChatChannelId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (FromUserId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(FromUserId);
+      }
+      if (ToUserId.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(ToUserId);
+      }
+      if (MessageType != global::WhatsApp.Gateway.Protos.Chat.MessageType.Media) {
+        output.WriteRawTag(40);
+        output.WriteEnum((int) MessageType);
+      }
+      if (FullName.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(FullName);
+      }
+      if (Content.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(Content);
+      }
+      mediaUrl_.WriteTo(ref output, _repeated_mediaUrl_codec);
+      if (sentAt_ != null) {
+        output.WriteRawTag(74);
+        output.WriteMessage(SentAt);
+      }
+      if (deliveredAt_ != null) {
+        output.WriteRawTag(82);
+        output.WriteMessage(DeliveredAt);
+      }
+      if (seenAt_ != null) {
+        output.WriteRawTag(90);
+        output.WriteMessage(SeenAt);
+      }
+      if (ChatChannelId.Length != 0) {
+        output.WriteRawTag(98);
+        output.WriteString(ChatChannelId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (FromUserId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(FromUserId);
+      }
+      if (ToUserId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ToUserId);
+      }
+      if (MessageType != global::WhatsApp.Gateway.Protos.Chat.MessageType.Media) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) MessageType);
+      }
+      if (FullName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(FullName);
+      }
+      if (Content.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Content);
+      }
+      size += mediaUrl_.CalculateSize(_repeated_mediaUrl_codec);
+      if (sentAt_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(SentAt);
+      }
+      if (deliveredAt_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(DeliveredAt);
+      }
+      if (seenAt_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(SeenAt);
+      }
+      if (ChatChannelId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ChatChannelId);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(NewGroupMessageRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.FromUserId.Length != 0) {
+        FromUserId = other.FromUserId;
+      }
+      if (other.ToUserId.Length != 0) {
+        ToUserId = other.ToUserId;
+      }
+      if (other.MessageType != global::WhatsApp.Gateway.Protos.Chat.MessageType.Media) {
+        MessageType = other.MessageType;
+      }
+      if (other.FullName.Length != 0) {
+        FullName = other.FullName;
+      }
+      if (other.Content.Length != 0) {
+        Content = other.Content;
+      }
+      mediaUrl_.Add(other.mediaUrl_);
+      if (other.sentAt_ != null) {
+        if (sentAt_ == null) {
+          SentAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        SentAt.MergeFrom(other.SentAt);
+      }
+      if (other.deliveredAt_ != null) {
+        if (deliveredAt_ == null) {
+          DeliveredAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        DeliveredAt.MergeFrom(other.DeliveredAt);
+      }
+      if (other.seenAt_ != null) {
+        if (seenAt_ == null) {
+          SeenAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        SeenAt.MergeFrom(other.SeenAt);
+      }
+      if (other.ChatChannelId.Length != 0) {
+        ChatChannelId = other.ChatChannelId;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            FromUserId = input.ReadString();
+            break;
+          }
+          case 18: {
+            ToUserId = input.ReadString();
+            break;
+          }
+          case 40: {
+            MessageType = (global::WhatsApp.Gateway.Protos.Chat.MessageType) input.ReadEnum();
+            break;
+          }
+          case 50: {
+            FullName = input.ReadString();
+            break;
+          }
+          case 58: {
+            Content = input.ReadString();
+            break;
+          }
+          case 66: {
+            mediaUrl_.AddEntriesFrom(input, _repeated_mediaUrl_codec);
+            break;
+          }
+          case 74: {
+            if (sentAt_ == null) {
+              SentAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(SentAt);
+            break;
+          }
+          case 82: {
+            if (deliveredAt_ == null) {
+              DeliveredAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(DeliveredAt);
+            break;
+          }
+          case 90: {
+            if (seenAt_ == null) {
+              SeenAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(SeenAt);
+            break;
+          }
+          case 98: {
+            ChatChannelId = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            FromUserId = input.ReadString();
+            break;
+          }
+          case 18: {
+            ToUserId = input.ReadString();
+            break;
+          }
+          case 40: {
+            MessageType = (global::WhatsApp.Gateway.Protos.Chat.MessageType) input.ReadEnum();
             break;
           }
           case 50: {
@@ -625,7 +3359,7 @@ namespace WhatsApp.Gateway.Proto.Client.Chat {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::WhatsApp.Gateway.Proto.Client.Chat.ChatReflection.Descriptor.MessageTypes[1]; }
+      get { return global::WhatsApp.Gateway.Protos.Chat.ChatReflection.Descriptor.MessageTypes[10]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -657,12 +3391,12 @@ namespace WhatsApp.Gateway.Proto.Client.Chat {
 
     /// <summary>Field number for the "content" field.</summary>
     public const int ContentFieldNumber = 1;
-    private static readonly pb::FieldCodec<global::WhatsApp.Gateway.Proto.Client.Chat.UserChatContentResponse> _repeated_content_codec
-        = pb::FieldCodec.ForMessage(10, global::WhatsApp.Gateway.Proto.Client.Chat.UserChatContentResponse.Parser);
-    private readonly pbc::RepeatedField<global::WhatsApp.Gateway.Proto.Client.Chat.UserChatContentResponse> content_ = new pbc::RepeatedField<global::WhatsApp.Gateway.Proto.Client.Chat.UserChatContentResponse>();
+    private static readonly pb::FieldCodec<global::WhatsApp.Gateway.Protos.Chat.UserChatContentResponse> _repeated_content_codec
+        = pb::FieldCodec.ForMessage(10, global::WhatsApp.Gateway.Protos.Chat.UserChatContentResponse.Parser);
+    private readonly pbc::RepeatedField<global::WhatsApp.Gateway.Protos.Chat.UserChatContentResponse> content_ = new pbc::RepeatedField<global::WhatsApp.Gateway.Protos.Chat.UserChatContentResponse>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::WhatsApp.Gateway.Proto.Client.Chat.UserChatContentResponse> Content {
+    public pbc::RepeatedField<global::WhatsApp.Gateway.Protos.Chat.UserChatContentResponse> Content {
       get { return content_; }
     }
 
@@ -803,7 +3537,7 @@ namespace WhatsApp.Gateway.Proto.Client.Chat {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::WhatsApp.Gateway.Proto.Client.Chat.ChatReflection.Descriptor.MessageTypes[2]; }
+      get { return global::WhatsApp.Gateway.Protos.Chat.ChatReflection.Descriptor.MessageTypes[11]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1130,7 +3864,7 @@ namespace WhatsApp.Gateway.Proto.Client.Chat {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::WhatsApp.Gateway.Proto.Client.Chat.ChatReflection.Descriptor.MessageTypes[3]; }
+      get { return global::WhatsApp.Gateway.Protos.Chat.ChatReflection.Descriptor.MessageTypes[12]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1319,7 +4053,7 @@ namespace WhatsApp.Gateway.Proto.Client.Chat {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::WhatsApp.Gateway.Proto.Client.Chat.ChatReflection.Descriptor.MessageTypes[4]; }
+      get { return global::WhatsApp.Gateway.Protos.Chat.ChatReflection.Descriptor.MessageTypes[13]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

@@ -1,3 +1,4 @@
+using Google.Protobuf.Collections;
 using Grpc.Core;
 using MediatR;
 using Web.Grpc.Extensions;
@@ -17,16 +18,37 @@ public class MediaService : Media.MediaBase
     }
 
 
-    public override async Task<UploadProfileImageRequestReply> UploadProfileImage(UploadProfileImageRequest request,
+    public override async Task<UploadProfileImageReply> UploadProfileImage(UploadProfileImageRequest request,
         ServerCallContext context)
     {
         var query = request.ToQuery();
 
         var profileUrl = await _mediator.Send(query);
 
-        return new UploadProfileImageRequestReply
+        return new UploadProfileImageReply
         {
             ProfileImageUrl = profileUrl
+        };
+    }
+
+    public override async Task<UploadChatFileReply> UploadChatFile(UploadChatFileRequest request,
+        ServerCallContext context)
+    {
+        var query = request.ToQuery();
+
+        var files = await _mediator.Send(query);
+
+        RepeatedField<string> list = new RepeatedField<string>();
+
+
+        foreach (var url in files)
+        {
+            list.Add(url);
+        }
+
+        return new UploadChatFileReply
+        {
+            ImageUrl = { list }
         };
     }
 }

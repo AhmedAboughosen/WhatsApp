@@ -10,3 +10,8 @@ D:\PersonalProjects\backend\WhatsApp\WhatsApp.Media\Infrastructure.MessageBus\ob
 D:\PersonalProjects\backend\WhatsApp\WhatsApp.Media\Infrastructure.MessageBus\obj\Debug\net6.0\refint\Infrastructure.MessageBus.dll
 D:\PersonalProjects\backend\WhatsApp\WhatsApp.Media\Infrastructure.MessageBus\obj\Debug\net6.0\Infrastructure.MessageBus.pdb
 D:\PersonalProjects\backend\WhatsApp\WhatsApp.Media\Infrastructure.MessageBus\obj\Debug\net6.0\ref\Infrastructure.MessageBus.dll
+D:\PersonalProjects\backend\WhatsApp\WhatsApp.Media\Infrastructure.MessageBus\bin\Debug\net6.0\Core.Application.dll
+D:\PersonalProjects\backend\WhatsApp\WhatsApp.Media\Infrastructure.MessageBus\bin\Debug\net6.0\Core.Domain.dll
+D:\PersonalProjects\backend\WhatsApp\WhatsApp.Media\Infrastructure.MessageBus\bin\Debug\net6.0\Core.Application.pdb
+D:\PersonalProjects\backend\WhatsApp\WhatsApp.Media\Infrastructure.MessageBus\bin\Debug\net6.0\Core.Domain.pdb
+D:\PersonalProjects\backend\WhatsApp\WhatsApp.Media\Infrastructure.MessageBus\obj\Debug\net6.0\Infrastructure.MessageBus.csproj.CopyComplete

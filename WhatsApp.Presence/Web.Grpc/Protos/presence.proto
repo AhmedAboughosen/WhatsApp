@@ -1,0 +1,41 @@
+syntax = "proto3";
+
+option csharp_namespace = "Web.Grpc.Protos.presence";
+
+package greet;
+
+import "google/protobuf/wrappers.proto";
+import "google/protobuf/empty.proto";
+import "google/protobuf/timestamp.proto";
+
+service Presence {
+  rpc CheckIn (CheckInRequest) returns (MessageReply);
+  rpc CheckOut (CheckOutRequest) returns (MessageReply);
+  rpc LastStatus (LastStatusRequest) returns (LastStatusReply);
+}
+
+message CheckInRequest {
+  string id = 1;
+}
+
+message CheckOutRequest {
+  string id = 1;
+}
+
+message LastStatusRequest {
+  string id = 1;
+}
+
+message MessageReply {
+  string message = 1;
+}
+
+message LastStatusReply {
+  google.protobuf.Timestamp last_seen = 1;
+  CheckType check_type = 2;
+}
+
+enum CheckType{
+    CheckIn = 0;
+    CheckOut = 1;
+}

@@ -1,7 +1,7 @@
 {
   "version": 2,
-  "dgSpecHash": "LaBIuizmeVUMDv9qvRb5QJ4I9OXl7weU2vZK4zRASlhrbmnRp0IQyvOM0XVtZ9rjhJIWks3XYVVWQQd0GCaOjg==",
-  "success": false,
+  "dgSpecHash": "thwu3fc+xygeWLGk/l+qe310SFStGLzMrhgymmFdVWod4hMq/6TkE6w7src3GLK6Qhx47/EN4nPbxpkLUOZCQQ==",
+  "success": true,
   "projectFilePath": "D:\\PersonalProjects\\backend\\WhatsApp\\WhatsApp.Chat\\Infrastructure.MessageBus\\Infrastructure.MessageBus.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\a.hassan\\.nuget\\packages\\corepush\\3.1.1\\corepush.3.1.1.nupkg.sha512",
@@ -28,7 +28,7 @@
     "C:\\Users\\a.hassan\\.nuget\\packages\\microsoft.extensions.hosting\\5.0.0\\microsoft.extensions.hosting.5.0.0.nupkg.sha512",
     "C:\\Users\\a.hassan\\.nuget\\packages\\microsoft.extensions.hosting.abstractions\\5.0.0\\microsoft.extensions.hosting.abstractions.5.0.0.nupkg.sha512",
     "C:\\Users\\a.hassan\\.nuget\\packages\\microsoft.extensions.logging\\7.0.0\\microsoft.extensions.logging.7.0.0.nupkg.sha512",
-    "C:\\Users\\a.hassan\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\5.0.0\\microsoft.extensions.logging.abstractions.5.0.0.nupkg.sha512",
+    "C:\\Users\\a.hassan\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\7.0.0\\microsoft.extensions.logging.abstractions.7.0.0.nupkg.sha512",
     "C:\\Users\\a.hassan\\.nuget\\packages\\microsoft.extensions.logging.configuration\\5.0.0\\microsoft.extensions.logging.configuration.5.0.0.nupkg.sha512",
     "C:\\Users\\a.hassan\\.nuget\\packages\\microsoft.extensions.logging.console\\5.0.0\\microsoft.extensions.logging.console.5.0.0.nupkg.sha512",
     "C:\\Users\\a.hassan\\.nuget\\packages\\microsoft.extensions.logging.debug\\5.0.0\\microsoft.extensions.logging.debug.5.0.0.nupkg.sha512",
@@ -52,24 +52,5 @@
     "C:\\Users\\a.hassan\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.12\\microsoft.windowsdesktop.app.ref.6.0.12.nupkg.sha512",
     "C:\\Users\\a.hassan\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.12\\microsoft.aspnetcore.app.ref.6.0.12.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "NU1605",
-      "level": "Error",
-      "message": "Detected package downgrade: Microsoft.Extensions.Logging.Abstractions from 7.0.0 to 5.0.0. Reference the package directly from the project to select a different version. \r\n Infrastructure.MessageBus -> Core.Domain -> Microsoft.EntityFrameworkCore 7.0.2 -> Microsoft.Extensions.Caching.Memory 7.0.0 -> Microsoft.Extensions.Logging.Abstractions (>= 7.0.0) \r\n Infrastructure.MessageBus -> Microsoft.Extensions.Logging.Abstractions (>= 5.0.0)",
-      "libraryId": "Microsoft.Extensions.Logging.Abstractions",
-      "targetGraphs": [
-        "net6.0"
-      ]
-    },
-    {
-      "code": "NU1605",
-      "level": "Error",
-      "message": "Detected package downgrade: Microsoft.Extensions.Logging.Abstractions from 7.0.0 to 5.0.0. Reference the package directly from the project to select a different version. \r\n Infrastructure.MessageBus -> Core.Domain -> Microsoft.EntityFrameworkCore 7.0.2 -> Microsoft.Extensions.Logging 7.0.0 -> Microsoft.Extensions.Logging.Abstractions (>= 7.0.0) \r\n Infrastructure.MessageBus -> Microsoft.Extensions.Logging.Abstractions (>= 5.0.0)",
-      "libraryId": "Microsoft.Extensions.Logging.Abstractions",
-      "targetGraphs": [
-        "net6.0"
-      ]
-    }
-  ]
+  "logs": []
 }

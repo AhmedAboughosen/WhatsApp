@@ -6,7 +6,8 @@ option csharp_namespace = "Web.Grpc.Proto.Media";
 
 
 service Media {
-  rpc UploadProfileImage (UploadProfileImageRequest) returns (UploadProfileImageRequestReply);
+  rpc UploadProfileImage (UploadProfileImageRequest) returns (UploadProfileImageReply);
+  rpc UploadChatFile (UploadChatFileRequest) returns (UploadChatFileReply);
 }
 
 message UploadProfileImageRequest {
@@ -15,6 +16,16 @@ message UploadProfileImageRequest {
   string extension = 3;
 }
 
-message UploadProfileImageRequestReply {
+message UploadChatFileRequest {
+  string user_id = 1;
+  repeated bytes files = 2;
+  string extension = 3;
+}
+
+message UploadProfileImageReply {
   string profile_image_url = 1;
+}
+
+message UploadChatFileReply {
+ repeated string image_url = 1;
 }

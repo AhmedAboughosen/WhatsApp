@@ -211,14 +211,6 @@
               "target": "Package",
               "version": "[5.0.0, )"
             },
-            "Microsoft.Extensions.Logging.Abstractions": {
-              "target": "Package",
-              "version": "[5.0.0, )"
-            },
-            "Newtonsoft.Json": {
-              "target": "Package",
-              "version": "[13.0.3-beta1, )"
-            },
             "RabbitMQ.Client": {
               "target": "Package",
               "version": "[6.4.0, )"
