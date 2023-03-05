@@ -1,0 +1,5 @@
+obj\Debug\net6.0\Protos\Client/Presence.cs \
+obj\Debug\net6.0\Protos\Client/PresenceGrpc.cs: C:/Users/a.hassan/.nuget/packages/grpc.tools/2.52.0-pre1/build/native/include/google/protobuf/wrappers.proto\
+ C:/Users/a.hassan/.nuget/packages/grpc.tools/2.52.0-pre1/build/native/include/google/protobuf/empty.proto\
+ C:/Users/a.hassan/.nuget/packages/grpc.tools/2.52.0-pre1/build/native/include/google/protobuf/timestamp.proto\
+ Protos/Client/presence.proto

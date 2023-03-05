@@ -1,6 +1,7 @@
 using Web.API.ExceptionHandler;
 using Web.Gateway.Proto.Media;
 using WhatsApp.Gateway.Protos.Chat;
+using WhatsApp.Gateway.Protos.Client.presence;
 using WhatsApp.Gateway.Web.Client.User;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -41,6 +42,11 @@ builder.Services.AddGrpcClient<Chat.ChatClient>((o) =>
 builder.Services.AddGrpcClient<Media.MediaClient>((o) =>
 {
     o.Address = new Uri(builder.Configuration["ClientUrls:MediaClient"]);
+});
+
+builder.Services.AddGrpcClient<Presence.PresenceClient>((o) =>
+{
+    o.Address = new Uri(builder.Configuration["ClientUrls:PresenceClient"]);
 });
 
 var app = builder.Build();

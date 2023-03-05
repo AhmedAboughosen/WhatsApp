@@ -10,7 +10,7 @@ using grpc = global::Grpc.Core;
 namespace Web.Grpc.Protos.presence {
   public static partial class Presence
   {
-    static readonly string __ServiceName = "greet.Presence";
+    static readonly string __ServiceName = "presence.Presence";
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
@@ -46,39 +46,39 @@ namespace Web.Grpc.Protos.presence {
     }
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::Web.Grpc.Protos.presence.CheckInRequest> __Marshaller_greet_CheckInRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Web.Grpc.Protos.presence.CheckInRequest.Parser));
+    static readonly grpc::Marshaller<global::Web.Grpc.Protos.presence.CheckInRequest> __Marshaller_presence_CheckInRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Web.Grpc.Protos.presence.CheckInRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::Web.Grpc.Protos.presence.MessageReply> __Marshaller_greet_MessageReply = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Web.Grpc.Protos.presence.MessageReply.Parser));
+    static readonly grpc::Marshaller<global::Web.Grpc.Protos.presence.MessageReply> __Marshaller_presence_MessageReply = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Web.Grpc.Protos.presence.MessageReply.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::Web.Grpc.Protos.presence.CheckOutRequest> __Marshaller_greet_CheckOutRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Web.Grpc.Protos.presence.CheckOutRequest.Parser));
+    static readonly grpc::Marshaller<global::Web.Grpc.Protos.presence.CheckOutRequest> __Marshaller_presence_CheckOutRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Web.Grpc.Protos.presence.CheckOutRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::Web.Grpc.Protos.presence.LastStatusRequest> __Marshaller_greet_LastStatusRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Web.Grpc.Protos.presence.LastStatusRequest.Parser));
+    static readonly grpc::Marshaller<global::Web.Grpc.Protos.presence.LastStatusRequest> __Marshaller_presence_LastStatusRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Web.Grpc.Protos.presence.LastStatusRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::Web.Grpc.Protos.presence.LastStatusReply> __Marshaller_greet_LastStatusReply = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Web.Grpc.Protos.presence.LastStatusReply.Parser));
+    static readonly grpc::Marshaller<global::Web.Grpc.Protos.presence.LastStatusReply> __Marshaller_presence_LastStatusReply = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Web.Grpc.Protos.presence.LastStatusReply.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Web.Grpc.Protos.presence.CheckInRequest, global::Web.Grpc.Protos.presence.MessageReply> __Method_CheckIn = new grpc::Method<global::Web.Grpc.Protos.presence.CheckInRequest, global::Web.Grpc.Protos.presence.MessageReply>(
         grpc::MethodType.Unary,
         __ServiceName,
         "CheckIn",
-        __Marshaller_greet_CheckInRequest,
-        __Marshaller_greet_MessageReply);
+        __Marshaller_presence_CheckInRequest,
+        __Marshaller_presence_MessageReply);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Web.Grpc.Protos.presence.CheckOutRequest, global::Web.Grpc.Protos.presence.MessageReply> __Method_CheckOut = new grpc::Method<global::Web.Grpc.Protos.presence.CheckOutRequest, global::Web.Grpc.Protos.presence.MessageReply>(
         grpc::MethodType.Unary,
         __ServiceName,
         "CheckOut",
-        __Marshaller_greet_CheckOutRequest,
-        __Marshaller_greet_MessageReply);
+        __Marshaller_presence_CheckOutRequest,
+        __Marshaller_presence_MessageReply);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Web.Grpc.Protos.presence.LastStatusRequest, global::Web.Grpc.Protos.presence.LastStatusReply> __Method_LastStatus = new grpc::Method<global::Web.Grpc.Protos.presence.LastStatusRequest, global::Web.Grpc.Protos.presence.LastStatusReply>(
         grpc::MethodType.Unary,
         __ServiceName,
         "LastStatus",
-        __Marshaller_greet_LastStatusRequest,
-        __Marshaller_greet_LastStatusReply);
+        __Marshaller_presence_LastStatusRequest,
+        __Marshaller_presence_LastStatusReply);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor

@@ -20,6 +20,7 @@
         <Protobuf Include="Protos\Client\user.proto" GrpcServices="Client" />
         <Protobuf Include="Protos\Client\chat.proto" GrpcServices="Client" />
         <Protobuf Include="Protos\Client\media.proto" GrpcServices="Client" />
+        <Protobuf Include="Protos\Client\presence.proto" GrpcServices="Client" />
         <Protobuf Include="Protos\Client\create_user.proto" GrpcServices="Client" />
     </ItemGroup>
     

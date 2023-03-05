@@ -32,3 +32,11 @@ D:\PersonalProjects\backend\WhatsApp\WhatsApp.Presence\Web.Grpc\obj\Debug\net6.0
 D:\PersonalProjects\backend\WhatsApp\WhatsApp.Presence\Web.Grpc\obj\Debug\net6.0\Web.Grpc.pdb
 D:\PersonalProjects\backend\WhatsApp\WhatsApp.Presence\Web.Grpc\obj\Debug\net6.0\Web.Grpc.genruntimeconfig.cache
 D:\PersonalProjects\backend\WhatsApp\WhatsApp.Presence\Web.Grpc\obj\Debug\net6.0\ref\Web.Grpc.dll
+D:\PersonalProjects\backend\WhatsApp\WhatsApp.Presence\Web.Grpc\bin\Debug\net6.0\MediatR.dll
+D:\PersonalProjects\backend\WhatsApp\WhatsApp.Presence\Web.Grpc\bin\Debug\net6.0\MediatR.Contracts.dll
+D:\PersonalProjects\backend\WhatsApp\WhatsApp.Presence\Web.Grpc\bin\Debug\net6.0\MediatR.Extensions.Microsoft.DependencyInjection.dll
+D:\PersonalProjects\backend\WhatsApp\WhatsApp.Presence\Web.Grpc\bin\Debug\net6.0\Microsoft.Extensions.Caching.Redis.dll
+D:\PersonalProjects\backend\WhatsApp\WhatsApp.Presence\Web.Grpc\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\PersonalProjects\backend\WhatsApp\WhatsApp.Presence\Web.Grpc\bin\Debug\net6.0\StackExchange.Redis.StrongName.dll
+D:\PersonalProjects\backend\WhatsApp\WhatsApp.Presence\Web.Grpc\bin\Debug\net6.0\Core.Domain.dll
+D:\PersonalProjects\backend\WhatsApp\WhatsApp.Presence\Web.Grpc\bin\Debug\net6.0\Core.Domain.pdb

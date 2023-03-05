@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-option csharp_namespace = "Web.Grpc.Protos.presence";
+option csharp_namespace = "WhatsApp.Gateway.Protos.Client.presence";
 
 package presence;
 
@@ -36,6 +36,6 @@ message LastStatusReply {
 }
 
 enum CheckType{
-    CheckIn = 0;
-    CheckOut = 1;
+  CheckIn = 0;
+  CheckOut = 1;
 }
