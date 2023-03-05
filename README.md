@@ -46,4 +46,17 @@ Simply, when your API publishes event messages, it doesn't directly send them. I
 3. setUpAccount(fullName: string,profileImage : bytes): string 
 4. UpdateProfile(fullName: string, dob : string): string 
 
+# Presence Service
+
+The presence service will keep track of the last seen status of all users. It will be discussed in detail separately.
+
+# Presence
+
+This table will contain a user's information such as id, last seen.
+
+# API design
+
+1. CheckIn(id: string): string
+2. CheckOut(id: string): string 
+3. LastStatus(id: string): string 
 
