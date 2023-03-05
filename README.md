@@ -16,6 +16,18 @@ Our system should meet the following requirements:
 2. The system should be scalable and efficient.
 
 
+# tech stack used.
+
+1. Message broker using RabbitMQ
+2. microservices architecture.
+3. microservices pattern such as (outbox pattern)
+4. manage distributed transaction using saga.
+5. Firebase Cloud for media.
+6. Asp core 6.0
+7. API Gateway Pattern.
+8. Sql server
+
+
 
 # High-level design
 
@@ -30,16 +42,16 @@ This is an HTTP-based service that handles user-related concerns such as authent
 
 We have the following tables:
 
-# users
+1. users
 
 This table will contain a user's information such as name, phoneNumber, and other details.
 
-# Outbox Message
+2. Outbox Message
 
 Simply, when your API publishes event messages, it doesn't directly send them. Instead, the messages are persisted in a database table. After that, A job publish events to message broker system in predefined time intervals. Basically The Outbox Pattern provides to publish events reliably.
 
 
-# API design
+3. API design
 
 1. CreateAccount(phoneNumber: string): string
 2. VerifyCode(phoneNumber: string,code : string): TokenDto 
@@ -50,13 +62,25 @@ Simply, when your API publishes event messages, it doesn't directly send them. I
 
 The presence service will keep track of the last seen status of all users. It will be discussed in detail separately.
 
-# Presence
+1. Presence
 
 This table will contain a user's information such as id, last seen.
 
-# API design
+2. API design
 
 1. CheckIn(id: string): string
 2. CheckOut(id: string): string 
 3. LastStatus(id: string): string 
+
+# Chat Service
+The chat service will use WebSockets and establish connections with the client to handle chat and group message-related functionality. We can also use cache to keep track of all the active connections sort of like sessions which will help us determine if the user is online or not.
+
+# Notification Service
+
+This service will simply send push notifications to the users. It will be discussed in detail separately.
+
+# Media service
+
+This service will handle the media (images, videos, files, etc.) uploads. It will be discussed in detail separately.
+
 
