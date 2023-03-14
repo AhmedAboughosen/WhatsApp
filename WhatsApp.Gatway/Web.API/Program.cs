@@ -1,6 +1,7 @@
 using Web.API.ExceptionHandler;
 using Web.Gateway.Proto.Media;
 using WhatsApp.Gateway.Protos.Chat;
+using WhatsApp.Gateway.Protos.Client.CreateUser;
 using WhatsApp.Gateway.Protos.Client.presence;
 using WhatsApp.Gateway.Web.Client.User;
 
@@ -29,7 +30,7 @@ builder.Services.AddGrpcClient<User.UserClient>((o) =>
     o.Address = new Uri(builder.Configuration["ClientUrls:UserClient"]);
 });
 
-builder.Services.AddGrpcClient<User.UserClient>((o) =>
+builder.Services.AddGrpcClient<CreateUser.CreateUserClient>((o) =>
 {
     o.Address = new Uri(builder.Configuration["ClientUrls:CreateUserClient"]);
 });
